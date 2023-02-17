@@ -1,0 +1,272 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "Το εξύπνο σπίτι που εξελίσσουμε"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "564ecea0-a2e1-11ed-aafd-33a827717a43"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "b9bcb160-a84e-11ed-aafd-33a827717a43"
+    },
+    "label" : "SH1",
+    "name" : "Smart House",
+    "type" : "building"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "b9bcb160-a84e-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "8c2283f0-ae12-11ed-aafd-33a827717a43"
+    },
+    "type" : "Manages",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "b9bcb160-a84e-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "8c885960-ae0c-11ed-aafd-33a827717a43"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "b9bcb160-a84e-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "9476d870-a6ed-11ed-aafd-33a827717a43"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "b9bcb160-a84e-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "963241b0-ae0c-11ed-aafd-33a827717a43"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "b9bcb160-a84e-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "ac006bb0-ae0d-11ed-aafd-33a827717a43"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "b9bcb160-a84e-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "b0862240-ae0a-11ed-aafd-33a827717a43"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "b9bcb160-a84e-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "b3337d10-ae0c-11ed-aafd-33a827717a43"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "b9bcb160-a84e-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "b887b820-ae12-11ed-aafd-33a827717a43"
+    },
+    "type" : "Manages",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "b9bcb160-a84e-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "d5758800-ae11-11ed-aafd-33a827717a43"
+    },
+    "type" : "Manages",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "b9bcb160-a84e-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "dbd86d90-ae0f-11ed-aafd-33a827717a43"
+    },
+    "type" : "Manages",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "b9bcb160-a84e-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "dd944b70-a88a-11ed-aafd-33a827717a43"
+    },
+    "type" : "Manages",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "b9bcb160-a84e-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "de9e3cf0-ae12-11ed-aafd-33a827717a43"
+    },
+    "type" : "Manages",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "b9bcb160-a84e-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "ed4ac210-ae11-11ed-aafd-33a827717a43"
+    },
+    "type" : "Manages",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "b9bcb160-a84e-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "5fb42800-ae12-11ed-aafd-33a827717a43"
+    },
+    "type" : "Manages",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "b9bcb160-a84e-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "6bae50a0-ae0c-11ed-aafd-33a827717a43"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "b9bcb160-a84e-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "6f6ec800-a84e-11ed-aafd-33a827717a43"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "b9bcb160-a84e-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "73cbc200-ae0b-11ed-aafd-33a827717a43"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "b9bcb160-a84e-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "752de5e0-ae12-11ed-aafd-33a827717a43"
+    },
+    "type" : "Manages",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "ImageUrl",
+      "lastUpdateTs" : 1675932971219,
+      "longValue" : null,
+      "strValue" : "https://drive.google.com/file/d/1ydrRzY01F0aoZRb-jeEcZllIVh0HaT0h/view?usp=share_link"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 36.437125,
+      "jsonValue" : null,
+      "key" : "Latitude",
+      "lastUpdateTs" : 1675930633431,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 25.338606,
+      "jsonValue" : null,
+      "key" : "Longitude",
+      "lastUpdateTs" : 1675931392824,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "address",
+      "lastUpdateTs" : 1675930562455,
+      "longValue" : null,
+      "strValue" : "Potamos, Thyresia"
+    } ]
+  }
+}

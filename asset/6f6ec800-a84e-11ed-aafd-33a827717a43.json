@@ -1,0 +1,64 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "Το κυρίως υπνοδωμάτιο του Σπιτιού"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "564ecea0-a2e1-11ed-aafd-33a827717a43"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "6f6ec800-a84e-11ed-aafd-33a827717a43"
+    },
+    "label" : "BR1",
+    "name" : "BedRoom 1",
+    "type" : "building space"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "b9bcb160-a84e-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "6f6ec800-a84e-11ed-aafd-33a827717a43"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "6f6ec800-a84e-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "dbd86d90-ae0f-11ed-aafd-33a827717a43"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : 0.32060469241575595,
+      "jsonValue" : null,
+      "key" : "xPos",
+      "lastUpdateTs" : 1675953993394,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.08497676377047761,
+      "jsonValue" : null,
+      "key" : "yPos",
+      "lastUpdateTs" : 1675953993394,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "entityType" : "CUSTOMER",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "Ο πατέρας",
+      "homeDashboardId" : null,
+      "homeDashboardHideToolbar" : true
+    },
+    "address" : null,
+    "address2" : null,
+    "city" : null,
+    "country" : "Greece",
+    "email" : "giorgoschristou@yahoo.gr",
+    "externalId" : null,
+    "id" : {
+      "entityType" : "CUSTOMER",
+      "id" : "2a412290-a7be-11ed-aafd-33a827717a43"
+    },
+    "name" : "Γιάννης",
+    "phone" : null,
+    "state" : null,
+    "title" : "Γιάννης",
+    "zip" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "CUSTOMER",
+      "id" : "2a412290-a7be-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "9476d870-a6ed-11ed-aafd-33a827717a43"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

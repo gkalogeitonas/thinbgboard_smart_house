@@ -1,0 +1,60 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "564ecea0-a2e1-11ed-aafd-33a827717a43"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "9476d870-a6ed-11ed-aafd-33a827717a43"
+    },
+    "label" : "GRDN",
+    "name" : "Garden",
+    "type" : "building space"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "9476d870-a6ed-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "de9e3cf0-ae12-11ed-aafd-33a827717a43"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "b9bcb160-a84e-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "9476d870-a6ed-11ed-aafd-33a827717a43"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "CUSTOMER",
+      "id" : "2a412290-a7be-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "9476d870-a6ed-11ed-aafd-33a827717a43"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

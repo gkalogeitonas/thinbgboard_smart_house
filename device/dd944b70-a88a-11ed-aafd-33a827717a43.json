@@ -1,0 +1,102 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : false,
+      "overwriteActivityTime" : false,
+      "description" : ""
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "564ecea0-a2e1-11ed-aafd-33a827717a43"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "dd875320-a88a-11ed-aafd-33a827717a43"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "dd944b70-a88a-11ed-aafd-33a827717a43"
+    },
+    "label" : "Multisensor",
+    "name" : "HydTmp Living Room",
+    "softwareId" : null,
+    "type" : "HydroTempSensor"
+  },
+  "credentials" : {
+    "credentialsId" : "ZVsH1zRkwAIOIcWRBOom",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "ac006bb0-ae0d-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "dd944b70-a88a-11ed-aafd-33a827717a43"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "b9bcb160-a84e-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "dd944b70-a88a-11ed-aafd-33a827717a43"
+    },
+    "type" : "Manages",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1675955600584,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1675955600584,
+      "longValue" : 1675955600583,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.541669885194616,
+      "jsonValue" : null,
+      "key" : "xPos",
+      "lastUpdateTs" : 1676563513778,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.3683150596700502,
+      "jsonValue" : null,
+      "key" : "yPos",
+      "lastUpdateTs" : 1676563513778,
+      "longValue" : null,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  }
+}

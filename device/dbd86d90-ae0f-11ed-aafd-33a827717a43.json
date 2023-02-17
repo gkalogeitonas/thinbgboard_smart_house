@@ -1,0 +1,102 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : false,
+      "overwriteActivityTime" : false,
+      "description" : ""
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "564ecea0-a2e1-11ed-aafd-33a827717a43"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "dd875320-a88a-11ed-aafd-33a827717a43"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "dbd86d90-ae0f-11ed-aafd-33a827717a43"
+    },
+    "label" : "",
+    "name" : "HydTmp BedRoom 1",
+    "softwareId" : null,
+    "type" : "HydroTempSensor"
+  },
+  "credentials" : {
+    "credentialsId" : "uZCAE9fhEzsGIU0N1Tt9",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "b9bcb160-a84e-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "dbd86d90-ae0f-11ed-aafd-33a827717a43"
+    },
+    "type" : "Manages",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "6f6ec800-a84e-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "dbd86d90-ae0f-11ed-aafd-33a827717a43"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1676562500583,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1676562500584,
+      "longValue" : 1676562500583,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.3167796214068708,
+      "jsonValue" : null,
+      "key" : "xPos",
+      "lastUpdateTs" : 1676563623165,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.19385999125796227,
+      "jsonValue" : null,
+      "key" : "yPos",
+      "lastUpdateTs" : 1676563623165,
+      "longValue" : null,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  }
+}

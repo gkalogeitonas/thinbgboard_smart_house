@@ -1,0 +1,396 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "HydTmp Generator"
+    },
+    "configuration" : null,
+    "debugMode" : false,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "4e20a820-aeda-11ed-aafd-33a827717a43"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "428428d0-a89e-11ed-aafd-33a827717a43"
+    },
+    "name" : "Smart House Rule Chain",
+    "root" : false,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 5,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 8,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 11,
+      "type" : "True"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 12,
+      "type" : "False"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 12,
+      "type" : "True"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 13,
+      "type" : "True"
+    } ],
+    "firstNodeIndex" : 10,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 92,
+        "layoutY" : 341
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 5,
+        "jsScript" : "var lowerTemp = 10;\nvar lowerHumid = 20;\nvar upperTemp = 30;\nvar upperHumid = 60;\n\nvar isDecrementTemp = 'false';\nvar isDecrementHumid = 'false';\nvar temperature = lowerTemp;\nvar humidity = lowerHumid\n\n\n\n//var metadata = { data: 40 };\n\n\n// Get previous values\n\nif (typeof prevMetadata !== 'undefined' &&\n  typeof prevMetadata.isDecrementTemp !== 'undefined') {\n  isDecrementTemp = prevMetadata.isDecrementTemp;\n}\nif (typeof prevMsg !== 'undefined' &&\n  typeof prevMsg.temperature !== 'undefined') {\n  temperature = prevMsg.temperature;\n}\n\nif (isDecrementTemp === 'true') {\n  temperature = temperature -0.1;\n  if (temperature <= lowerTemp) {\n    isDecrementTemp = 'false';\n    temperature = lowerTemp;\n  }\n} else {\n  temperature = temperature + 0.1;\n  if (temperature >= upperTemp) {\n    isDecrementTemp = 'true';\n    temperature = upperTemp;\n  }\n}\n\n// Humidity\nif (typeof prevMetadata !== 'undefined' &&\n  typeof prevMetadata.isDecrementHumid !== 'undefined') {\n  isDecrementHumid = prevMetadata.isDecrementHumid;\n}\nif (typeof prevMsg !== 'undefined' &&\n  typeof prevMsg.humidity !== 'undefined') {\n  humidity = prevMsg.humidity;\n}\n\nif (isDecrementHumid === 'true') {\n  humidity = humidity -0.2;\n  if (humidity <= lowerHumid) {\n    isDecrementHumid = 'false';\n    humidity = lowerHumid;\n  }\n} else {\n  humidity = humidity + 0.2;\n  if (humidity >= upperHumid) {\n    isDecrementHumid = 'true';\n    humidity = upperHumid;\n  }\n}\n\nvar msg = { temperature: temperature, humidity: humidity };\nvar metadata = { isDecrementTemp: isDecrementTemp, isDecrementHumid: isDecrementHumid };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "dd944b70-a88a-11ed-aafd-33a827717a43",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "0ad9f290-a8a1-11ed-aafd-33a827717a43"
+      },
+      "name" : "Living Room",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 588,
+        "layoutY" : 354
+      },
+      "configuration" : {
+        "ruleChainId" : "1324ac60-9be5-11ed-aafd-33a827717a43"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "0adadcf0-a8a1-11ed-aafd-33a827717a43"
+      },
+      "name" : "rule chain",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 93,
+        "layoutY" : 398
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 4,
+        "jsScript" : "var lowerTemp = 10;\nvar lowerHumid = 20;\nvar upperTemp = 30;\nvar upperHumid = 60;\n\nvar isDecrementTemp = 'false';\nvar isDecrementHumid = 'false';\nvar temperature = lowerTemp;\nvar humidity = lowerHumid\n\n\n\n//var metadata = { data: 40 };\n\n\n// Get previous values\n\nif (typeof prevMetadata !== 'undefined' &&\n  typeof prevMetadata.isDecrementTemp !== 'undefined') {\n  isDecrementTemp = prevMetadata.isDecrementTemp;\n}\nif (typeof prevMsg !== 'undefined' &&\n  typeof prevMsg.temperature !== 'undefined') {\n  temperature = prevMsg.temperature;\n}\n\nif (isDecrementTemp === 'true') {\n  temperature = temperature -0.1;\n  if (temperature <= lowerTemp) {\n    isDecrementTemp = 'false';\n    temperature = lowerTemp;\n  }\n} else {\n  temperature = temperature + 0.1;\n  if (temperature >= upperTemp) {\n    isDecrementTemp = 'true';\n    temperature = upperTemp;\n  }\n}\n\n// Humidity\nif (typeof prevMetadata !== 'undefined' &&\n  typeof prevMetadata.isDecrementHumid !== 'undefined') {\n  isDecrementHumid = prevMetadata.isDecrementHumid;\n}\nif (typeof prevMsg !== 'undefined' &&\n  typeof prevMsg.humidity !== 'undefined') {\n  humidity = prevMsg.humidity;\n}\n\nif (isDecrementHumid === 'true') {\n  humidity = humidity -0.2;\n  if (humidity <= lowerHumid) {\n    isDecrementHumid = 'false';\n    humidity = lowerHumid;\n  }\n} else {\n  humidity = humidity + 0.2;\n  if (humidity >= upperHumid) {\n    isDecrementHumid = 'true';\n    humidity = upperHumid;\n  }\n}\n\nvar msg = { temperature: temperature, humidity: humidity };\nvar metadata = { isDecrementTemp: isDecrementTemp, isDecrementHumid: isDecrementHumid };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "dbd86d90-ae0f-11ed-aafd-33a827717a43",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "c4189ad0-ae10-11ed-aafd-33a827717a43"
+      },
+      "name" : "BedRoom 1",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 91,
+        "layoutY" : 445
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 3,
+        "jsScript" : "var lowerTemp = 10;\nvar lowerHumid = 20;\nvar upperTemp = 30;\nvar upperHumid = 60;\n\nvar isDecrementTemp = 'false';\nvar isDecrementHumid = 'false';\nvar temperature = lowerTemp;\nvar humidity = lowerHumid\n\n\n\n//var metadata = { data: 40 };\n\n\n// Get previous values\n\nif (typeof prevMetadata !== 'undefined' &&\n  typeof prevMetadata.isDecrementTemp !== 'undefined') {\n  isDecrementTemp = prevMetadata.isDecrementTemp;\n}\nif (typeof prevMsg !== 'undefined' &&\n  typeof prevMsg.temperature !== 'undefined') {\n  temperature = prevMsg.temperature;\n}\n\nif (isDecrementTemp === 'true') {\n  temperature = temperature -0.1;\n  if (temperature <= lowerTemp) {\n    isDecrementTemp = 'false';\n    temperature = lowerTemp;\n  }\n} else {\n  temperature = temperature + 0.1;\n  if (temperature >= upperTemp) {\n    isDecrementTemp = 'true';\n    temperature = upperTemp;\n  }\n}\n\n// Humidity\nif (typeof prevMetadata !== 'undefined' &&\n  typeof prevMetadata.isDecrementHumid !== 'undefined') {\n  isDecrementHumid = prevMetadata.isDecrementHumid;\n}\nif (typeof prevMsg !== 'undefined' &&\n  typeof prevMsg.humidity !== 'undefined') {\n  humidity = prevMsg.humidity;\n}\n\nif (isDecrementHumid === 'true') {\n  humidity = humidity -0.2;\n  if (humidity <= lowerHumid) {\n    isDecrementHumid = 'false';\n    humidity = lowerHumid;\n  }\n} else {\n  humidity = humidity + 0.2;\n  if (humidity >= upperHumid) {\n    isDecrementHumid = 'true';\n    humidity = upperHumid;\n  }\n}\n\nvar msg = { temperature: temperature, humidity: humidity };\nvar metadata = { isDecrementTemp: isDecrementTemp, isDecrementHumid: isDecrementHumid };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "d5758800-ae11-11ed-aafd-33a827717a43",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "226d3f30-ae13-11ed-aafd-33a827717a43"
+      },
+      "name" : "BedRoom 2",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 91,
+        "layoutY" : 492
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 2,
+        "jsScript" : "var lowerTemp = 10;\nvar lowerHumid = 20;\nvar upperTemp = 30;\nvar upperHumid = 60;\n\nvar isDecrementTemp = 'false';\nvar isDecrementHumid = 'false';\nvar temperature = lowerTemp;\nvar humidity = lowerHumid\n\n\n\n//var metadata = { data: 40 };\n\n\n// Get previous values\n\nif (typeof prevMetadata !== 'undefined' &&\n  typeof prevMetadata.isDecrementTemp !== 'undefined') {\n  isDecrementTemp = prevMetadata.isDecrementTemp;\n}\nif (typeof prevMsg !== 'undefined' &&\n  typeof prevMsg.temperature !== 'undefined') {\n  temperature = prevMsg.temperature;\n}\n\nif (isDecrementTemp === 'true') {\n  temperature = temperature -0.1;\n  if (temperature <= lowerTemp) {\n    isDecrementTemp = 'false';\n    temperature = lowerTemp;\n  }\n} else {\n  temperature = temperature + 0.1;\n  if (temperature >= upperTemp) {\n    isDecrementTemp = 'true';\n    temperature = upperTemp;\n  }\n}\n\n// Humidity\nif (typeof prevMetadata !== 'undefined' &&\n  typeof prevMetadata.isDecrementHumid !== 'undefined') {\n  isDecrementHumid = prevMetadata.isDecrementHumid;\n}\nif (typeof prevMsg !== 'undefined' &&\n  typeof prevMsg.humidity !== 'undefined') {\n  humidity = prevMsg.humidity;\n}\n\nif (isDecrementHumid === 'true') {\n  humidity = humidity -0.2;\n  if (humidity <= lowerHumid) {\n    isDecrementHumid = 'false';\n    humidity = lowerHumid;\n  }\n} else {\n  humidity = humidity + 0.2;\n  if (humidity >= upperHumid) {\n    isDecrementHumid = 'true';\n    humidity = upperHumid;\n  }\n}\n\nvar msg = { temperature: temperature, humidity: humidity };\nvar metadata = { isDecrementTemp: isDecrementTemp, isDecrementHumid: isDecrementHumid };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "ed4ac210-ae11-11ed-aafd-33a827717a43",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "226d6640-ae13-11ed-aafd-33a827717a43"
+      },
+      "name" : "BedRoom 3",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 92,
+        "layoutY" : 560
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 6,
+        "jsScript" : "var lowerTemp = 10;\nvar lowerHumid = 20;\nvar upperTemp = 30;\nvar upperHumid = 60;\n\nvar isDecrementTemp = 'false';\nvar isDecrementHumid = 'false';\nvar temperature = lowerTemp;\nvar humidity = lowerHumid\n\n\n\n//var metadata = { data: 40 };\n\n\n// Get previous values\n\nif (typeof prevMetadata !== 'undefined' &&\n  typeof prevMetadata.isDecrementTemp !== 'undefined') {\n  isDecrementTemp = prevMetadata.isDecrementTemp;\n}\nif (typeof prevMsg !== 'undefined' &&\n  typeof prevMsg.temperature !== 'undefined') {\n  temperature = prevMsg.temperature;\n}\n\nif (isDecrementTemp === 'true') {\n  temperature = temperature -0.1;\n  if (temperature <= lowerTemp) {\n    isDecrementTemp = 'false';\n    temperature = lowerTemp;\n  }\n} else {\n  temperature = temperature + 0.1;\n  if (temperature >= upperTemp) {\n    isDecrementTemp = 'true';\n    temperature = upperTemp;\n  }\n}\n\n// Humidity\nif (typeof prevMetadata !== 'undefined' &&\n  typeof prevMetadata.isDecrementHumid !== 'undefined') {\n  isDecrementHumid = prevMetadata.isDecrementHumid;\n}\nif (typeof prevMsg !== 'undefined' &&\n  typeof prevMsg.humidity !== 'undefined') {\n  humidity = prevMsg.humidity;\n}\n\nif (isDecrementHumid === 'true') {\n  humidity = humidity -0.2;\n  if (humidity <= lowerHumid) {\n    isDecrementHumid = 'false';\n    humidity = lowerHumid;\n  }\n} else {\n  humidity = humidity + 0.2;\n  if (humidity >= upperHumid) {\n    isDecrementHumid = 'true';\n    humidity = upperHumid;\n  }\n}\n\nvar msg = { temperature: temperature, humidity: humidity };\nvar metadata = { isDecrementTemp: isDecrementTemp, isDecrementHumid: isDecrementHumid };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "752de5e0-ae12-11ed-aafd-33a827717a43",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8fa0e300-ae17-11ed-aafd-33a827717a43"
+      },
+      "name" : "BathRoom 1",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 91,
+        "layoutY" : 606
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 7,
+        "jsScript" : "var lowerTemp = 10;\nvar lowerHumid = 20;\nvar upperTemp = 30;\nvar upperHumid = 60;\n\nvar isDecrementTemp = 'false';\nvar isDecrementHumid = 'false';\nvar temperature = lowerTemp;\nvar humidity = lowerHumid\n\n\n\n//var metadata = { data: 40 };\n\n\n// Get previous values\n\nif (typeof prevMetadata !== 'undefined' &&\n  typeof prevMetadata.isDecrementTemp !== 'undefined') {\n  isDecrementTemp = prevMetadata.isDecrementTemp;\n}\nif (typeof prevMsg !== 'undefined' &&\n  typeof prevMsg.temperature !== 'undefined') {\n  temperature = prevMsg.temperature;\n}\n\nif (isDecrementTemp === 'true') {\n  temperature = temperature -0.1;\n  if (temperature <= lowerTemp) {\n    isDecrementTemp = 'false';\n    temperature = lowerTemp;\n  }\n} else {\n  temperature = temperature + 0.1;\n  if (temperature >= upperTemp) {\n    isDecrementTemp = 'true';\n    temperature = upperTemp;\n  }\n}\n\n// Humidity\nif (typeof prevMetadata !== 'undefined' &&\n  typeof prevMetadata.isDecrementHumid !== 'undefined') {\n  isDecrementHumid = prevMetadata.isDecrementHumid;\n}\nif (typeof prevMsg !== 'undefined' &&\n  typeof prevMsg.humidity !== 'undefined') {\n  humidity = prevMsg.humidity;\n}\n\nif (isDecrementHumid === 'true') {\n  humidity = humidity -0.2;\n  if (humidity <= lowerHumid) {\n    isDecrementHumid = 'false';\n    humidity = lowerHumid;\n  }\n} else {\n  humidity = humidity + 0.2;\n  if (humidity >= upperHumid) {\n    isDecrementHumid = 'true';\n    humidity = upperHumid;\n  }\n}\n\nvar msg = { temperature: temperature, humidity: humidity };\nvar metadata = { isDecrementTemp: isDecrementTemp, isDecrementHumid: isDecrementHumid };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "8c2283f0-ae12-11ed-aafd-33a827717a43",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8fa10a10-ae17-11ed-aafd-33a827717a43"
+      },
+      "name" : "BathRoom 2",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 93,
+        "layoutY" : 775
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 2,
+        "jsScript" : "var lowerTemp = 10;\nvar lowerHumid = 20;\nvar upperTemp = 30;\nvar upperHumid = 60;\n\nvar isDecrementTemp = 'false';\nvar isDecrementHumid = 'false';\nvar temperature = lowerTemp;\nvar humidity = lowerHumid\n\n\n\n//var metadata = { data: 40 };\n\n\n// Get previous values\n\nif (typeof prevMetadata !== 'undefined' &&\n  typeof prevMetadata.isDecrementTemp !== 'undefined') {\n  isDecrementTemp = prevMetadata.isDecrementTemp;\n}\nif (typeof prevMsg !== 'undefined' &&\n  typeof prevMsg.temperature !== 'undefined') {\n  temperature = prevMsg.temperature;\n}\n\nif (isDecrementTemp === 'true') {\n  temperature = temperature -0.1;\n  if (temperature <= lowerTemp) {\n    isDecrementTemp = 'false';\n    temperature = lowerTemp;\n  }\n} else {\n  temperature = temperature + 0.1;\n  if (temperature >= upperTemp) {\n    isDecrementTemp = 'true';\n    temperature = upperTemp;\n  }\n}\n\n// Humidity\nif (typeof prevMetadata !== 'undefined' &&\n  typeof prevMetadata.isDecrementHumid !== 'undefined') {\n  isDecrementHumid = prevMetadata.isDecrementHumid;\n}\nif (typeof prevMsg !== 'undefined' &&\n  typeof prevMsg.humidity !== 'undefined') {\n  humidity = prevMsg.humidity;\n}\n\nif (isDecrementHumid === 'true') {\n  humidity = humidity -0.2;\n  if (humidity <= lowerHumid) {\n    isDecrementHumid = 'false';\n    humidity = lowerHumid;\n  }\n} else {\n  humidity = humidity + 0.2;\n  if (humidity >= upperHumid) {\n    isDecrementHumid = 'true';\n    humidity = upperHumid;\n  }\n}\n\nvar msg = { temperature: temperature, humidity: humidity };\nvar metadata = { isDecrementTemp: isDecrementTemp, isDecrementHumid: isDecrementHumid };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "5fb42800-ae12-11ed-aafd-33a827717a43",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8fa10a11-ae17-11ed-aafd-33a827717a43"
+      },
+      "name" : "Kitchen",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 93,
+        "layoutY" : 668
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 8,
+        "jsScript" : "var lowerTemp = 10;\nvar lowerHumid = 20;\nvar upperTemp = 30;\nvar upperHumid = 60;\n\nvar isDecrementTemp = 'false';\nvar isDecrementHumid = 'false';\nvar temperature = lowerTemp;\nvar humidity = lowerHumid\n\n\n\n//var metadata = { data: 40 };\n\n\n// Get previous values\n\nif (typeof prevMetadata !== 'undefined' &&\n  typeof prevMetadata.isDecrementTemp !== 'undefined') {\n  isDecrementTemp = prevMetadata.isDecrementTemp;\n}\nif (typeof prevMsg !== 'undefined' &&\n  typeof prevMsg.temperature !== 'undefined') {\n  temperature = prevMsg.temperature;\n}\n\nif (isDecrementTemp === 'true') {\n  temperature = temperature -0.1;\n  if (temperature <= lowerTemp) {\n    isDecrementTemp = 'false';\n    temperature = lowerTemp;\n  }\n} else {\n  temperature = temperature + 0.1;\n  if (temperature >= upperTemp) {\n    isDecrementTemp = 'true';\n    temperature = upperTemp;\n  }\n}\n\n// Humidity\nif (typeof prevMetadata !== 'undefined' &&\n  typeof prevMetadata.isDecrementHumid !== 'undefined') {\n  isDecrementHumid = prevMetadata.isDecrementHumid;\n}\nif (typeof prevMsg !== 'undefined' &&\n  typeof prevMsg.humidity !== 'undefined') {\n  humidity = prevMsg.humidity;\n}\n\nif (isDecrementHumid === 'true') {\n  humidity = humidity -0.2;\n  if (humidity <= lowerHumid) {\n    isDecrementHumid = 'false';\n    humidity = lowerHumid;\n  }\n} else {\n  humidity = humidity + 0.2;\n  if (humidity >= upperHumid) {\n    isDecrementHumid = 'true';\n    humidity = upperHumid;\n  }\n}\n\nvar msg = { temperature: temperature, humidity: humidity };\nvar metadata = { isDecrementTemp: isDecrementTemp, isDecrementHumid: isDecrementHumid };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "de9e3cf0-ae12-11ed-aafd-33a827717a43",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8fa10a12-ae17-11ed-aafd-33a827717a43"
+      },
+      "name" : "Garden",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 94,
+        "layoutY" : 723
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 9,
+        "jsScript" : "var lowerTemp = 10;\nvar lowerHumid = 20;\nvar upperTemp = 30;\nvar upperHumid = 60;\n\nvar isDecrementTemp = 'false';\nvar isDecrementHumid = 'false';\nvar temperature = lowerTemp;\nvar humidity = lowerHumid\n\n\n\n//var metadata = { data: 40 };\n\n\n// Get previous values\n\nif (typeof prevMetadata !== 'undefined' &&\n  typeof prevMetadata.isDecrementTemp !== 'undefined') {\n  isDecrementTemp = prevMetadata.isDecrementTemp;\n}\nif (typeof prevMsg !== 'undefined' &&\n  typeof prevMsg.temperature !== 'undefined') {\n  temperature = prevMsg.temperature;\n}\n\nif (isDecrementTemp === 'true') {\n  temperature = temperature -0.1;\n  if (temperature <= lowerTemp) {\n    isDecrementTemp = 'false';\n    temperature = lowerTemp;\n  }\n} else {\n  temperature = temperature + 0.1;\n  if (temperature >= upperTemp) {\n    isDecrementTemp = 'true';\n    temperature = upperTemp;\n  }\n}\n\n// Humidity\nif (typeof prevMetadata !== 'undefined' &&\n  typeof prevMetadata.isDecrementHumid !== 'undefined') {\n  isDecrementHumid = prevMetadata.isDecrementHumid;\n}\nif (typeof prevMsg !== 'undefined' &&\n  typeof prevMsg.humidity !== 'undefined') {\n  humidity = prevMsg.humidity;\n}\n\nif (isDecrementHumid === 'true') {\n  humidity = humidity -0.2;\n  if (humidity <= lowerHumid) {\n    isDecrementHumid = 'false';\n    humidity = lowerHumid;\n  }\n} else {\n  humidity = humidity + 0.2;\n  if (humidity >= upperHumid) {\n    isDecrementHumid = 'true';\n    humidity = upperHumid;\n  }\n}\n\nvar msg = { temperature: temperature, humidity: humidity };\nvar metadata = { isDecrementTemp: isDecrementTemp, isDecrementHumid: isDecrementHumid };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "b887b820-ae12-11ed-aafd-33a827717a43",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8fa13120-ae17-11ed-aafd-33a827717a43"
+      },
+      "name" : "Office",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 292,
+        "layoutY" : 103
+      },
+      "configuration" : {
+        "jsScript" : "return msg.temperature > 45;"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "4e20a820-aeda-11ed-aafd-33a827717a43"
+      },
+      "name" : "Temperature Check",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 611,
+        "layoutY" : 158
+      },
+      "configuration" : {
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "General Alarm",
+        "severity" : "CRITICAL",
+        "propagate" : true,
+        "relationTypes" : [ ],
+        "propagateToOwner" : true,
+        "propagateToTenant" : true,
+        "dynamicSeverity" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "4e20a821-aeda-11ed-aafd-33a827717a43"
+      },
+      "name" : "create alarm",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 307,
+        "layoutY" : 233
+      },
+      "configuration" : {
+        "alarmStatusList" : [ "CLEARED_ACK" ]
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "500c5c70-aee3-11ed-aafd-33a827717a43"
+      },
+      "name" : "alarm status",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbCheckAlarmStatusNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 663,
+        "layoutY" : 256
+      },
+      "configuration" : {
+        "alarmType" : "General Alarm",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "500c8380-aee3-11ed-aafd-33a827717a43"
+      },
+      "name" : "clear alarm",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbClearAlarmNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
