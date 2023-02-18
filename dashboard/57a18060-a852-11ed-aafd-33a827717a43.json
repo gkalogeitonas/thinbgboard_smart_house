@@ -952,6 +952,98 @@
           "row" : 0,
           "col" : 0,
           "id" : "1522557d-023f-9186-a395-637b6a8cde2d"
+        },
+        "3e2ee993-9b2d-2afd-5b95-cbb5694780f9" : {
+          "isSystemType" : true,
+          "bundleAlias" : "control_widgets",
+          "typeAlias" : "led_indicator",
+          "type" : "rpc",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 2.5,
+          "sizeY" : 2.5,
+          "config" : {
+            "targetDeviceAliases" : [ ],
+            "showTitle" : false,
+            "backgroundColor" : "#e6e7e8",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "requestTimeout" : 500,
+              "initialValue" : true,
+              "title" : "Led indicator",
+              "ledColor" : "#4caf50",
+              "valueAttribute" : "value",
+              "retrieveValueMethod" : "attribute",
+              "parseValueFunction" : "return data ? true : false;",
+              "performCheckStatus" : true,
+              "checkStatusMethod" : "checkStatus"
+            },
+            "title" : "New Led indicator",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "decimals" : 2,
+            "datasources" : [ ],
+            "targetDeviceAliasIds" : [ "bc1e2b4c-644c-a581-8489-b417aea2ac6c" ]
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "3e2ee993-9b2d-2afd-5b95-cbb5694780f9"
+        },
+        "c07a9dd9-1a25-713e-735e-667aa02c5a38" : {
+          "isSystemType" : true,
+          "bundleAlias" : "control_widgets",
+          "typeAlias" : "round_switch",
+          "type" : "rpc",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 2.5,
+          "sizeY" : 2,
+          "config" : {
+            "targetDeviceAliases" : [ ],
+            "showTitle" : false,
+            "backgroundColor" : "#e6e7e8",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "requestTimeout" : 500,
+              "initialValue" : false,
+              "getValueMethod" : "getValue",
+              "setValueMethod" : "setValue",
+              "title" : "Round switch",
+              "retrieveValueMethod" : "rpc",
+              "valueKey" : "value",
+              "parseValueFunction" : "return data ? true : false;",
+              "convertValueFunction" : "return value;"
+            },
+            "title" : "New Round switch",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "decimals" : 2,
+            "datasources" : [ ],
+            "targetDeviceAliasIds" : [ "bc1e2b4c-644c-a581-8489-b417aea2ac6c" ]
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "c07a9dd9-1a25-713e-735e-667aa02c5a38"
         }
       },
       "states" : {
@@ -1012,10 +1104,10 @@
             "main" : {
               "widgets" : {
                 "d256a733-a2ce-a4f1-c29a-772dac10b290" : {
-                  "sizeX" : 15,
+                  "sizeX" : 10,
                   "sizeY" : 5,
                   "row" : 0,
-                  "col" : 8
+                  "col" : 13
                 },
                 "65e6f8c5-45b6-f9e5-c470-6eacb7af256e" : {
                   "sizeX" : 16,
@@ -1026,14 +1118,26 @@
                 "5cc3d91b-1b65-3033-1aed-3755371d1220" : {
                   "sizeX" : 6,
                   "sizeY" : 5,
-                  "row" : 6,
-                  "col" : 1
+                  "row" : 0,
+                  "col" : 7
                 },
                 "1522557d-023f-9186-a395-637b6a8cde2d" : {
                   "sizeX" : 6,
                   "sizeY" : 5,
                   "row" : 0,
                   "col" : 1
+                },
+                "3e2ee993-9b2d-2afd-5b95-cbb5694780f9" : {
+                  "sizeX" : 2,
+                  "sizeY" : 2,
+                  "row" : 5,
+                  "col" : 1
+                },
+                "c07a9dd9-1a25-713e-735e-667aa02c5a38" : {
+                  "sizeX" : 2,
+                  "sizeY" : 2,
+                  "row" : 5,
+                  "col" : 4
                 }
               },
               "gridSettings" : {
@@ -1105,6 +1209,16 @@
             "resolveMultiple" : false,
             "stateEntityParamName" : null,
             "defaultStateEntity" : null
+          }
+        },
+        "bc1e2b4c-644c-a581-8489-b417aea2ac6c" : {
+          "id" : "bc1e2b4c-644c-a581-8489-b417aea2ac6c",
+          "alias" : "Lamps",
+          "filter" : {
+            "type" : "deviceType",
+            "resolveMultiple" : true,
+            "deviceType" : "lamp",
+            "deviceNameFilter" : ""
           }
         }
       },
