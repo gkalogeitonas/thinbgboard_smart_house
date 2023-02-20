@@ -13,10 +13,10 @@
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE_PROFILE",
-      "id" : "dd875320-a88a-11ed-aafd-33a827717a43"
+      "id" : "a1e869d0-b032-11ed-aafd-33a827717a43"
     },
     "image" : null,
-    "name" : "HydroTempSensor",
+    "name" : "robot",
     "profileData" : {
       "alarms" : null,
       "configuration" : {

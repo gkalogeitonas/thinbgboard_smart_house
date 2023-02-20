@@ -61,17 +61,13 @@
       "toIndex" : 11,
       "type" : "True"
     }, {
-      "fromIndex" : 10,
-      "toIndex" : 12,
-      "type" : "False"
-    }, {
-      "fromIndex" : 10,
-      "toIndex" : 12,
-      "type" : "True"
-    }, {
       "fromIndex" : 12,
-      "toIndex" : 13,
-      "type" : "True"
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 13,
+      "toIndex" : 1,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : 10,
     "nodes" : [ {
@@ -100,8 +96,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 588,
-        "layoutY" : 354
+        "layoutX" : 771,
+        "layoutY" : 240
       },
       "configuration" : {
         "ruleChainId" : "1324ac60-9be5-11ed-aafd-33a827717a43"
@@ -350,42 +346,49 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 307,
-        "layoutY" : 233
+        "layoutX" : 472,
+        "layoutY" : 561
       },
       "configuration" : {
-        "alarmStatusList" : [ "CLEARED_ACK" ]
+        "msgCount" : 0,
+        "periodInSeconds" : 2,
+        "jsScript" : "var enable = Math.random() > 0.5 ? true : false;\r\nvar msg = { enable: enable };\r\nreturn { msg: msg, metadata: {}, msgType: \"POST_TELEMETRY_REQUEST\" };",
+        "originatorId" : "541d3bd0-afca-11ed-aafd-33a827717a43",
+        "originatorType" : "DEVICE"
       },
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "500c5c70-aee3-11ed-aafd-33a827717a43"
+        "id" : "fe726280-b043-11ed-aafd-33a827717a43"
       },
-      "name" : "alarm status",
+      "name" : "SH LVNG Lamp Emu",
       "ruleChainId" : null,
-      "type" : "org.thingsboard.rule.engine.filter.TbCheckAlarmStatusNode"
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 663,
-        "layoutY" : 256
+        "layoutX" : 479,
+        "layoutY" : 623
       },
       "configuration" : {
-        "alarmType" : "General Alarm",
-        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;"
+        "msgCount" : 0,
+        "periodInSeconds" : 2,
+        "jsScript" : "var enable = Math.random() > 0.5 ? true : false;\r\nvar msg = { enable: enable };\r\nreturn { msg: msg, metadata: {}, msgType: \"POST_TELEMETRY_REQUEST\" };",
+        "originatorId" : "c2440b80-afc9-11ed-aafd-33a827717a43",
+        "originatorType" : "DEVICE"
       },
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "500c8380-aee3-11ed-aafd-33a827717a43"
+        "id" : "414b9310-b044-11ed-aafd-33a827717a43"
       },
-      "name" : "clear alarm",
+      "name" : "SH BR1 Lamp Emu",
       "ruleChainId" : null,
-      "type" : "org.thingsboard.rule.engine.action.TbClearAlarmNode"
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
     } ],
     "ruleChainConnections" : null
   },

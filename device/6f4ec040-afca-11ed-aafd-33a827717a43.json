@@ -20,21 +20,21 @@
     },
     "deviceProfileId" : {
       "entityType" : "DEVICE_PROFILE",
-      "id" : "dd875320-a88a-11ed-aafd-33a827717a43"
+      "id" : "6cb34e80-ad51-11ed-aafd-33a827717a43"
     },
     "externalId" : null,
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE",
-      "id" : "dbd86d90-ae0f-11ed-aafd-33a827717a43"
+      "id" : "6f4ec040-afca-11ed-aafd-33a827717a43"
     },
-    "label" : "",
-    "name" : "HydTmp BedRoom 1",
+    "label" : "GRDNL",
+    "name" : "SH GRDN Lamp",
     "softwareId" : null,
-    "type" : "HydroTempSensor"
+    "type" : "lamp + motion sensor"
   },
   "credentials" : {
-    "credentialsId" : "uZCAE9fhEzsGIU0N1Tt9",
+    "credentialsId" : "m4h27G95qEeGYpsnjA8L",
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
@@ -42,25 +42,25 @@
     "additionalInfo" : null,
     "from" : {
       "entityType" : "ASSET",
-      "id" : "b9bcb160-a84e-11ed-aafd-33a827717a43"
+      "id" : "9476d870-a6ed-11ed-aafd-33a827717a43"
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "dbd86d90-ae0f-11ed-aafd-33a827717a43"
+      "id" : "6f4ec040-afca-11ed-aafd-33a827717a43"
     },
-    "type" : "Manages",
+    "type" : "Contains",
     "typeGroup" : "COMMON"
   }, {
     "additionalInfo" : null,
     "from" : {
       "entityType" : "ASSET",
-      "id" : "6f6ec800-a84e-11ed-aafd-33a827717a43"
+      "id" : "b9bcb160-a84e-11ed-aafd-33a827717a43"
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "dbd86d90-ae0f-11ed-aafd-33a827717a43"
+      "id" : "6f4ec040-afca-11ed-aafd-33a827717a43"
     },
-    "type" : "Contains",
+    "type" : "Manages",
     "typeGroup" : "COMMON"
   } ],
   "attributes" : {
@@ -69,7 +69,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1676794160584,
+      "lastUpdateTs" : 1676826320583,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -77,32 +77,16 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1676794160584,
-      "longValue" : 1676794160583,
+      "lastUpdateTs" : 1676826320584,
+      "longValue" : 1676826320583,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1676793503032,
-      "longValue" : 1676793501394,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : 0.3138137291676222,
-      "jsonValue" : null,
-      "key" : "xPos",
-      "lastUpdateTs" : 1676809520368,
-      "longValue" : null,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : 0.16342069689614977,
-      "jsonValue" : null,
-      "key" : "yPos",
-      "lastUpdateTs" : 1676809520368,
-      "longValue" : null,
+      "lastUpdateTs" : 1676825720016,
+      "longValue" : 1676825718654,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ ]

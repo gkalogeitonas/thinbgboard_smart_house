@@ -4,7 +4,10 @@
     "default" : false,
     "defaultDashboardId" : null,
     "defaultQueueName" : null,
-    "defaultRuleChainId" : null,
+    "defaultRuleChainId" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "1324ac60-9be5-11ed-aafd-33a827717a43"
+    },
     "description" : null,
     "externalId" : null,
     "firmwareId" : null,
@@ -13,7 +16,7 @@
       "id" : "6cb34e80-ad51-11ed-aafd-33a827717a43"
     },
     "image" : null,
-    "name" : "lamp",
+    "name" : "lamp + motion sensor",
     "profileData" : {
       "alarms" : null,
       "configuration" : {

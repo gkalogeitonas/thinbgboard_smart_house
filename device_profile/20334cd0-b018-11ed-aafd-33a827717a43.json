@@ -8,15 +8,15 @@
       "entityType" : "RULE_CHAIN",
       "id" : "1324ac60-9be5-11ed-aafd-33a827717a43"
     },
-    "description" : null,
+    "description" : "",
     "externalId" : null,
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE_PROFILE",
-      "id" : "dd875320-a88a-11ed-aafd-33a827717a43"
+      "id" : "20334cd0-b018-11ed-aafd-33a827717a43"
     },
     "image" : null,
-    "name" : "HydroTempSensor",
+    "name" : "lock",
     "profileData" : {
       "alarms" : null,
       "configuration" : {

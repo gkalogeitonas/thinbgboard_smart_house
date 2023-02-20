@@ -37,6 +37,18 @@
     },
     "to" : {
       "entityType" : "DEVICE",
+      "id" : "3e828870-afca-11ed-aafd-33a827717a43"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "6bae50a0-ae0c-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
       "id" : "5fb42800-ae12-11ed-aafd-33a827717a43"
     },
     "type" : "Contains",

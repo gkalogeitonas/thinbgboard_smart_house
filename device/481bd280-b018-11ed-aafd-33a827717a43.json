@@ -20,21 +20,21 @@
     },
     "deviceProfileId" : {
       "entityType" : "DEVICE_PROFILE",
-      "id" : "dd875320-a88a-11ed-aafd-33a827717a43"
+      "id" : "20334cd0-b018-11ed-aafd-33a827717a43"
     },
     "externalId" : null,
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE",
-      "id" : "dbd86d90-ae0f-11ed-aafd-33a827717a43"
+      "id" : "481bd280-b018-11ed-aafd-33a827717a43"
     },
-    "label" : "",
-    "name" : "HydTmp BedRoom 1",
+    "label" : "DRlck",
+    "name" : "DoorLock 1",
     "softwareId" : null,
-    "type" : "HydroTempSensor"
+    "type" : "lock"
   },
   "credentials" : {
-    "credentialsId" : "uZCAE9fhEzsGIU0N1Tt9",
+    "credentialsId" : "NnK6j2tCAMLIMcAymQZg",
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
@@ -46,21 +46,9 @@
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "dbd86d90-ae0f-11ed-aafd-33a827717a43"
+      "id" : "481bd280-b018-11ed-aafd-33a827717a43"
     },
     "type" : "Manages",
-    "typeGroup" : "COMMON"
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "ASSET",
-      "id" : "6f6ec800-a84e-11ed-aafd-33a827717a43"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "dbd86d90-ae0f-11ed-aafd-33a827717a43"
-    },
-    "type" : "Contains",
     "typeGroup" : "COMMON"
   } ],
   "attributes" : {
@@ -69,7 +57,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1676794160584,
+      "lastUpdateTs" : 1676910500584,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -77,32 +65,16 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1676794160584,
-      "longValue" : 1676794160583,
+      "lastUpdateTs" : 1676910500584,
+      "longValue" : 1676910500583,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1676793503032,
-      "longValue" : 1676793501394,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : 0.3138137291676222,
-      "jsonValue" : null,
-      "key" : "xPos",
-      "lastUpdateTs" : 1676809520368,
-      "longValue" : null,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : 0.16342069689614977,
-      "jsonValue" : null,
-      "key" : "yPos",
-      "lastUpdateTs" : 1676809520368,
-      "longValue" : null,
+      "lastUpdateTs" : 1676909873023,
+      "longValue" : 1676909871183,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ ]

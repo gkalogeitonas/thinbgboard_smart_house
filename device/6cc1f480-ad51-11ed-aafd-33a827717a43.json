@@ -31,7 +31,7 @@
     "label" : "",
     "name" : "Virtual Lamb",
     "softwareId" : null,
-    "type" : "lamp"
+    "type" : "lamp + motion sensor"
   },
   "credentials" : {
     "credentialsId" : "THtaVijswvCEMBHSuCyP",
@@ -45,7 +45,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1676480720583,
+      "lastUpdateTs" : 1676826260583,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -53,8 +53,16 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1676480720584,
-      "longValue" : 1676480720583,
+      "lastUpdateTs" : 1676826260584,
+      "longValue" : 1676826260583,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1676825657012,
+      "longValue" : 1676825655023,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ ]
