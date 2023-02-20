@@ -991,7 +991,7 @@
             "color" : "rgba(0, 0, 0, 0.87)",
             "padding" : "4px",
             "settings" : {
-              "entitiesTitle" : "Auto Illumination",
+              "entitiesTitle" : "Lights",
               "enableSearch" : true,
               "enableSelectColumnDisplay" : true,
               "enableStickyHeader" : true,
@@ -1085,7 +1085,7 @@
                 },
                 "a7e94cfa-65f1-6873-bf73-7934875ffa4c" : {
                   "sizeX" : 3,
-                  "sizeY" : 11,
+                  "sizeY" : 10,
                   "row" : 0,
                   "col" : 19
                 }
