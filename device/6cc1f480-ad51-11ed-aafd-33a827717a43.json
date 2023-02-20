@@ -20,7 +20,7 @@
     },
     "deviceProfileId" : {
       "entityType" : "DEVICE_PROFILE",
-      "id" : "6cb34e80-ad51-11ed-aafd-33a827717a43"
+      "id" : "8c397b60-b154-11ed-aafd-33a827717a43"
     },
     "externalId" : null,
     "firmwareId" : null,
@@ -31,7 +31,7 @@
     "label" : "",
     "name" : "Virtual Lamb",
     "softwareId" : null,
-    "type" : "lamp + motion sensor"
+    "type" : "virtual dev"
   },
   "credentials" : {
     "credentialsId" : "THtaVijswvCEMBHSuCyP",
