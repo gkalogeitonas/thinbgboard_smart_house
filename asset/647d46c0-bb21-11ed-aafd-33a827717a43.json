@@ -2,7 +2,7 @@
   "entityType" : "ASSET",
   "entity" : {
     "additionalInfo" : {
-      "description" : ""
+      "description" : "Room 308"
     },
     "customerId" : {
       "entityType" : "CUSTOMER",
@@ -13,7 +13,7 @@
       "entityType" : "ASSET",
       "id" : "647d46c0-bb21-11ed-aafd-33a827717a43"
     },
-    "label" : "Room 308",
+    "label" : "Room for user Aggelos",
     "name" : "Hospital_Room",
     "type" : "Building"
   },
