@@ -28,7 +28,7 @@
       "entityType" : "DEVICE",
       "id" : "2fae7c00-bb2d-11ed-aafd-33a827717a43"
     },
-    "label" : "microcontroller for SSKIoT1",
+    "label" : "microcontroller for SSKIoT_1",
     "name" : "SSKIoT_uino1",
     "softwareId" : null,
     "type" : "Arduino"
