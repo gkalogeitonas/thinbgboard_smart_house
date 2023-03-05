@@ -1,13 +1,10 @@
 {
   "entityType" : "DEVICE_PROFILE",
   "entity" : {
-    "default" : false,
+    "default" : true,
     "defaultDashboardId" : null,
     "defaultQueueName" : null,
-    "defaultRuleChainId" : {
-      "entityType" : "RULE_CHAIN",
-      "id" : "1324ac60-9be5-11ed-aafd-33a827717a43"
-    },
+    "defaultRuleChainId" : null,
     "description" : "",
     "externalId" : null,
     "firmwareId" : null,
