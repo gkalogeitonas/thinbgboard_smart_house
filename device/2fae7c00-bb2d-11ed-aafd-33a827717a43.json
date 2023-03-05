@@ -20,7 +20,7 @@
     },
     "deviceProfileId" : {
       "entityType" : "DEVICE_PROFILE",
-      "id" : "2f9c0570-bb2d-11ed-aafd-33a827717a43"
+      "id" : "54f69b00-bb32-11ed-aafd-33a827717a43"
     },
     "externalId" : null,
     "firmwareId" : null,
@@ -29,9 +29,9 @@
       "id" : "2fae7c00-bb2d-11ed-aafd-33a827717a43"
     },
     "label" : "microcontroller for SSKIoT1",
-    "name" : "SSKuino1",
+    "name" : "SSKIoT_uino1",
     "softwareId" : null,
-    "type" : "SSKuino1"
+    "type" : "SSKIoT_uino1"
   },
   "credentials" : {
     "credentialsId" : "nJi2Snvbn31sMGHE7All",
@@ -40,7 +40,23 @@
   },
   "relations" : [ ],
   "attributes" : {
-    "SERVER_SCOPE" : [ ],
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1678004480584,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1678004480584,
+      "longValue" : 1678004480583,
+      "strValue" : null
+    } ],
     "SHARED_SCOPE" : [ ]
   }
 }
