@@ -8,7 +8,7 @@
     },
     "customerId" : {
       "entityType" : "CUSTOMER",
-      "id" : "13814000-1dd2-11b2-8080-808080808080"
+      "id" : "564ecea0-a2e1-11ed-aafd-33a827717a43"
     },
     "deviceData" : {
       "configuration" : {
@@ -20,7 +20,7 @@
     },
     "deviceProfileId" : {
       "entityType" : "DEVICE_PROFILE",
-      "id" : "66b4d780-bb32-11ed-aafd-33a827717a43"
+      "id" : "7404bec0-bb71-11ed-aafd-33a827717a43"
     },
     "externalId" : null,
     "firmwareId" : null,
@@ -31,7 +31,7 @@
     "label" : "HR + SpO2 sensor for SSKIoT1",
     "name" : "SSKIoT_sensor1",
     "softwareId" : null,
-    "type" : "SSKIoT_sensor1"
+    "type" : "sensor"
   },
   "credentials" : {
     "credentialsId" : "PnyRpDS5KdDT8eqwbFbM",
