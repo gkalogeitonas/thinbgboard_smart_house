@@ -28,7 +28,7 @@
       "entityType" : "DEVICE",
       "id" : "715ebcf0-bb2d-11ed-aafd-33a827717a43"
     },
-    "label" : "computer for SSKIoT1",
+    "label" : "computer for SSKIoT_1",
     "name" : "SSKIoT_comp1",
     "softwareId" : null,
     "type" : "Raspberry Pi"
