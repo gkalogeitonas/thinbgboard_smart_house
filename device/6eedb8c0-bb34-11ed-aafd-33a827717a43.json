@@ -8,7 +8,7 @@
     },
     "customerId" : {
       "entityType" : "CUSTOMER",
-      "id" : "13814000-1dd2-11b2-8080-808080808080"
+      "id" : "564ecea0-a2e1-11ed-aafd-33a827717a43"
     },
     "deviceData" : {
       "configuration" : {
@@ -20,7 +20,7 @@
     },
     "deviceProfileId" : {
       "entityType" : "DEVICE_PROFILE",
-      "id" : "6ee2e350-bb34-11ed-aafd-33a827717a43"
+      "id" : "9105d310-bb71-11ed-aafd-33a827717a43"
     },
     "externalId" : null,
     "firmwareId" : null,
@@ -31,7 +31,7 @@
     "label" : "device for Home",
     "name" : "SSKIoT_1",
     "softwareId" : null,
-    "type" : "SSKIoT_1"
+    "type" : "SSKIoT"
   },
   "credentials" : {
     "credentialsId" : "GRWsWgHsIxy2MbE4Beno",
@@ -40,7 +40,23 @@
   },
   "relations" : [ ],
   "attributes" : {
-    "SERVER_SCOPE" : [ ],
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1678007540583,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1678007540584,
+      "longValue" : 1678007540583,
+      "strValue" : null
+    } ],
     "SHARED_SCOPE" : [ ]
   }
 }
