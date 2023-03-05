@@ -8,7 +8,7 @@
     },
     "customerId" : {
       "entityType" : "CUSTOMER",
-      "id" : "13814000-1dd2-11b2-8080-808080808080"
+      "id" : "564ecea0-a2e1-11ed-aafd-33a827717a43"
     },
     "deviceData" : {
       "configuration" : {
@@ -29,7 +29,7 @@
       "id" : "afbab1e0-bb71-11ed-aafd-33a827717a43"
     },
     "label" : "device for Hospital Room",
-    "name" : "SSKIoT2",
+    "name" : "SSKIoT_2",
     "softwareId" : null,
     "type" : "SSKIoT"
   },
