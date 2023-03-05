@@ -4,7 +4,7 @@
     "additionalInfo" : {
       "gateway" : false,
       "overwriteActivityTime" : false,
-      "description" : "microcontroller for Hospital Room"
+      "description" : "microcontroller for SSKIoT_2"
     },
     "customerId" : {
       "entityType" : "CUSTOMER",
@@ -28,7 +28,7 @@
       "entityType" : "DEVICE",
       "id" : "6a7f8000-bb72-11ed-aafd-33a827717a43"
     },
-    "label" : "",
+    "label" : "microcontroller for SSKIoT_2",
     "name" : "SSKIoT_uino2",
     "softwareId" : null,
     "type" : "Arduino"
@@ -40,7 +40,15 @@
   },
   "relations" : [ ],
   "attributes" : {
-    "SERVER_SCOPE" : [ ],
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1678033560611,
+      "longValue" : null,
+      "strValue" : null
+    } ],
     "SHARED_SCOPE" : [ ]
   }
 }
