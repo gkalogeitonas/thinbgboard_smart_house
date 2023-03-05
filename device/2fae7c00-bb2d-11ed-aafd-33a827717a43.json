@@ -8,7 +8,7 @@
     },
     "customerId" : {
       "entityType" : "CUSTOMER",
-      "id" : "13814000-1dd2-11b2-8080-808080808080"
+      "id" : "564ecea0-a2e1-11ed-aafd-33a827717a43"
     },
     "deviceData" : {
       "configuration" : {
@@ -20,7 +20,7 @@
     },
     "deviceProfileId" : {
       "entityType" : "DEVICE_PROFILE",
-      "id" : "54f69b00-bb32-11ed-aafd-33a827717a43"
+      "id" : "4f924d00-bb71-11ed-aafd-33a827717a43"
     },
     "externalId" : null,
     "firmwareId" : null,
@@ -31,7 +31,7 @@
     "label" : "microcontroller for SSKIoT1",
     "name" : "SSKIoT_uino1",
     "softwareId" : null,
-    "type" : "SSKIoT_uino1"
+    "type" : "Arduino"
   },
   "credentials" : {
     "credentialsId" : "nJi2Snvbn31sMGHE7All",
