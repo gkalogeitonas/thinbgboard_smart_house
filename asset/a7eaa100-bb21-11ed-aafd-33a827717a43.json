@@ -2,7 +2,7 @@
   "entityType" : "ASSET",
   "entity" : {
     "additionalInfo" : {
-      "description" : "Room for user Vasilis"
+      "description" : ""
     },
     "customerId" : {
       "entityType" : "CUSTOMER",
@@ -13,7 +13,7 @@
       "entityType" : "ASSET",
       "id" : "a7eaa100-bb21-11ed-aafd-33a827717a43"
     },
-    "label" : "Hospital_Room for ER",
+    "label" : "Room for user  Vasilis",
     "name" : "Hospital_ER",
     "type" : "Building"
   },
