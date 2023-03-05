@@ -28,7 +28,7 @@
       "entityType" : "DEVICE",
       "id" : "afbab1e0-bb71-11ed-aafd-33a827717a43"
     },
-    "label" : "",
+    "label" : "device for Hospital Room",
     "name" : "SSKIoT2",
     "softwareId" : null,
     "type" : "SSKIoT"
@@ -40,7 +40,15 @@
   },
   "relations" : [ ],
   "attributes" : {
-    "SERVER_SCOPE" : [ ],
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1678033247255,
+      "longValue" : null,
+      "strValue" : null
+    } ],
     "SHARED_SCOPE" : [ ]
   }
 }
