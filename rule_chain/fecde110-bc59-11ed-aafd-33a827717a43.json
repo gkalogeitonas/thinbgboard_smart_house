@@ -9,7 +9,7 @@
     "externalId" : null,
     "firstRuleNodeId" : {
       "entityType" : "RULE_NODE",
-      "id" : "6da55bc0-bc5c-11ed-aafd-33a827717a43"
+      "id" : "45cc2610-bc61-11ed-aafd-33a827717a43"
     },
     "id" : {
       "entityType" : "RULE_CHAIN",
@@ -29,7 +29,7 @@
       "toIndex" : 1,
       "type" : "True"
     } ],
-    "firstNodeIndex" : 0,
+    "firstNodeIndex" : 2,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
@@ -84,7 +84,7 @@
         "layoutY" : 240
       },
       "configuration" : {
-        "jsScript" : "//return msg.Heart_Rate > 70;\nif (msg.Heart_Rate >100) {\n  return;\n}\n\nif (msg.SpO2 <98) {\n  return;\n}"
+        "jsScript" : "//return msg.Heart_Rate > 70;\nif (msg.Heart_Rate >100) {\n  return true;\n}\n\nif (msg.SpO2 <98) {\n  return true;\n}"
       },
       "createdTime" : 0,
       "debugMode" : false,
