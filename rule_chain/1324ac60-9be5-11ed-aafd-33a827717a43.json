@@ -23,6 +23,10 @@
       "toIndex" : 7,
       "type" : "Success"
     }, {
+      "fromIndex" : 0,
+      "toIndex" : 8,
+      "type" : "Success"
+    }, {
       "fromIndex" : 2,
       "toIndex" : 0,
       "type" : "Post telemetry"
@@ -180,8 +184,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 743,
-        "layoutY" : 360
+        "layoutX" : 773,
+        "layoutY" : 246
       },
       "configuration" : {
         "ruleChainId" : "428428d0-a89e-11ed-aafd-33a827717a43"
@@ -194,6 +198,25 @@
         "id" : "275fc040-aedf-11ed-aafd-33a827717a43"
       },
       "name" : "Smart House",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 775,
+        "layoutY" : 325
+      },
+      "configuration" : {
+        "ruleChainId" : "fecde110-bc59-11ed-aafd-33a827717a43"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "6cf242f0-bc5d-11ed-aafd-33a827717a43"
+      },
+      "name" : "Create alarm SpO2",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
     } ],
