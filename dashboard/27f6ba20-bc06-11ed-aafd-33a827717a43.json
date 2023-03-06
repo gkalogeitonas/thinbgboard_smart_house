@@ -472,40 +472,33 @@
             "color" : "rgba(255, 254, 254, 0.87)",
             "padding" : "0px",
             "settings" : {
+              "minValue" : 60,
               "maxValue" : 100,
-              "minValue" : 0,
-              "donutStartAngle" : 90,
-              "showValue" : true,
-              "showMinMax" : true,
+              "gaugeType" : "arc",
               "gaugeWidthScale" : 0.75,
+              "neonGlowBrightness" : 70,
+              "dashThickness" : 1,
+              "roundedLineCap" : false,
+              "useFixedLevelColor" : false,
               "levelColors" : [ ],
-              "titleFont" : {
-                "family" : "Roboto",
-                "size" : 12,
-                "style" : "normal",
-                "weight" : "500"
-              },
-              "labelFont" : {
-                "family" : "Roboto",
-                "size" : 8,
-                "style" : "normal",
-                "weight" : "500"
-              },
+              "showTitle" : false,
+              "showUnitTitle" : false,
+              "showTimestamp" : false,
+              "showValue" : true,
               "valueFont" : {
                 "family" : "Segment7Standard",
                 "style" : "normal",
                 "weight" : "500",
                 "size" : 32
               },
+              "showMinMax" : true,
               "minMaxFont" : {
                 "family" : "Segment7Standard",
                 "size" : 12,
                 "style" : "normal",
                 "weight" : "500"
               },
-              "neonGlowBrightness" : 70,
-              "dashThickness" : 1,
-              "gaugeType" : "arc",
+              "showTicks" : false,
               "animation" : true,
               "animationDuration" : 500,
               "animationRule" : "linear"
