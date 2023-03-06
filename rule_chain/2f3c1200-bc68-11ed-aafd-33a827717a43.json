@@ -33,7 +33,7 @@
         "layoutY" : 150
       },
       "configuration" : {
-        "jsScript" : "return msg.Heart_Rate > 95;"
+        "jsScript" : "return msg.Heart_Rate > 90;"
       },
       "createdTime" : 0,
       "debugMode" : false,
