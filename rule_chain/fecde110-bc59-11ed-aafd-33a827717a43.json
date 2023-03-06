@@ -84,7 +84,7 @@
         "layoutY" : 240
       },
       "configuration" : {
-        "jsScript" : "return msg.Heart_Rate > 70;"
+        "jsScript" : "//return msg.Heart_Rate > 70;\nif (msg.Heart_Rate >100) {\n  return msg.Heart_Rate;\n}\n\nif (msg.SpO2 <96) {\n  return msg.SpO2;\n}"
       },
       "createdTime" : 0,
       "debugMode" : false,
