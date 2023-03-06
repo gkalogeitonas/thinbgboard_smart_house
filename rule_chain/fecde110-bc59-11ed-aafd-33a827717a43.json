@@ -59,7 +59,7 @@
         "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
         "useMessageAlarmData" : false,
         "overwriteAlarmDetails" : false,
-        "alarmType" : "Critical SpO2",
+        "alarmType" : "$[messageKey] : Heart_Rate",
         "severity" : "CRITICAL",
         "propagate" : false,
         "relationTypes" : [ ],
