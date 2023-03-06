@@ -20,7 +20,7 @@
     },
     "deviceProfileId" : {
       "entityType" : "DEVICE_PROFILE",
-      "id" : "13221450-9be5-11ed-aafd-33a827717a43"
+      "id" : "4f924d00-bb71-11ed-aafd-33a827717a43"
     },
     "externalId" : null,
     "firmwareId" : null,
@@ -31,7 +31,7 @@
     "label" : "ard3.1",
     "name" : "ard3.1",
     "softwareId" : null,
-    "type" : "Thermometer"
+    "type" : "Arduino"
   },
   "credentials" : {
     "credentialsId" : "xZ1dDVldSr6694HR0NND",
@@ -40,7 +40,15 @@
   },
   "relations" : [ ],
   "attributes" : {
-    "SERVER_SCOPE" : [ ],
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1678139480449,
+      "longValue" : null,
+      "strValue" : null
+    } ],
     "SHARED_SCOPE" : [ ]
   }
 }
