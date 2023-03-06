@@ -33,7 +33,7 @@
         "layoutY" : 151
       },
       "configuration" : {
-        "jsScript" : "return msg.temperature < 60;"
+        "jsScript" : "return msg.temperature < 96;"
       },
       "createdTime" : 0,
       "debugMode" : false,
