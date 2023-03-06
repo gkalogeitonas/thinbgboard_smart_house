@@ -9,7 +9,7 @@
     "externalId" : null,
     "firstRuleNodeId" : {
       "entityType" : "RULE_NODE",
-      "id" : "45cc2610-bc61-11ed-aafd-33a827717a43"
+      "id" : "6da55bc0-bc5c-11ed-aafd-33a827717a43"
     },
     "id" : {
       "entityType" : "RULE_CHAIN",
@@ -29,7 +29,7 @@
       "toIndex" : 1,
       "type" : "True"
     } ],
-    "firstNodeIndex" : 2,
+    "firstNodeIndex" : 0,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
