@@ -503,7 +503,7 @@
               "animationDuration" : 500,
               "animationRule" : "linear"
             },
-            "title" : "New Neon gauge",
+            "title" : "Heart Rate",
             "dropShadow" : true,
             "enableFullscreen" : true,
             "titleStyle" : {
@@ -513,7 +513,11 @@
             "widgetStyle" : { },
             "useDashboardTimewindow" : true,
             "showLegend" : false,
-            "actions" : { }
+            "actions" : { },
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "decimals" : 0,
+            "noDataDisplayMessage" : ""
           },
           "row" : 0,
           "col" : 0,
