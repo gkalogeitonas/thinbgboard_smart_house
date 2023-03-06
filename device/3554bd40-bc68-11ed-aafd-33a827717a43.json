@@ -28,8 +28,8 @@
       "entityType" : "DEVICE",
       "id" : "3554bd40-bc68-11ed-aafd-33a827717a43"
     },
-    "label" : "ard2",
-    "name" : "ard2",
+    "label" : "ard1.2",
+    "name" : "ard1.2",
     "softwareId" : null,
     "type" : "Arduino"
   },
