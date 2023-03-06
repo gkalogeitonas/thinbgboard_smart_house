@@ -68,12 +68,19 @@
               "entityAliasId" : "e373f6fd-904e-9c0f-5b2f-bc08e20ae076",
               "filterId" : null,
               "dataKeys" : [ {
-                "name" : "measurements",
+                "name" : "Heart_Rate",
                 "type" : "timeseries",
-                "label" : "measurements",
+                "label" : "Heart_Rate",
                 "color" : "#2196f3",
                 "settings" : { },
-                "_hash" : 0.08687911107167201
+                "_hash" : 0.28061348146101683
+              }, {
+                "name" : "SpO2",
+                "type" : "timeseries",
+                "label" : "SpO2",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.6332401400149101
               } ]
             } ]
           },
