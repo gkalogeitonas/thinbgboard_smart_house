@@ -261,7 +261,7 @@
                 "ticksFormatter" : ""
               },
               "shadowSize" : 4,
-              "smoothLines" : true,
+              "smoothLines" : false,
               "comparisonEnabled" : false,
               "xaxisSecond" : {
                 "axisPosition" : "top",
@@ -482,8 +482,16 @@
               "useFixedLevelColor" : false,
               "levelColors" : [ ],
               "showTitle" : false,
-              "showUnitTitle" : false,
+              "showUnitTitle" : true,
+              "unitTitle" : "Heart Rate",
               "showTimestamp" : false,
+              "labelFont" : {
+                "family" : "Roboto",
+                "size" : 8,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : null
+              },
               "showValue" : true,
               "valueFont" : {
                 "family" : "Segment7Standard",
