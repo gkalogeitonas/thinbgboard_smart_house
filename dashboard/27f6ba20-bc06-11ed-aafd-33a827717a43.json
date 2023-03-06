@@ -82,7 +82,23 @@
                 "settings" : { },
                 "_hash" : 0.6332401400149101
               } ]
-            } ]
+            } ],
+            "actions" : {
+              "rowClick" : [ {
+                "name" : "to_measurements_details",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboardState",
+                "targetDashboardStateId" : "measurements_details",
+                "setEntityId" : true,
+                "stateEntityParamName" : null,
+                "openRightLayout" : false,
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "f53e5e66-f16a-5048-d11c-7eab2c9ee849"
+              } ]
+            }
           },
           "row" : 0,
           "col" : 0,
