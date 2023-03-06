@@ -28,8 +28,8 @@
       "entityType" : "DEVICE",
       "id" : "5e645dd0-bc68-11ed-aafd-33a827717a43"
     },
-    "label" : "ard1.3",
-    "name" : "ard1.3",
+    "label" : "ard2.1",
+    "name" : "ard2.1",
     "softwareId" : null,
     "type" : "Arduino"
   },
@@ -40,7 +40,15 @@
   },
   "relations" : [ ],
   "attributes" : {
-    "SERVER_SCOPE" : [ ],
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1678139196497,
+      "longValue" : null,
+      "strValue" : null
+    } ],
     "SHARED_SCOPE" : [ ]
   }
 }
