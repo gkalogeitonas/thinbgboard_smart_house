@@ -15,7 +15,7 @@
       "entityType" : "RULE_CHAIN",
       "id" : "fecde110-bc59-11ed-aafd-33a827717a43"
     },
-    "name" : "Create alarm",
+    "name" : "Create alarm SpO2",
     "root" : false,
     "type" : "CORE"
   },
