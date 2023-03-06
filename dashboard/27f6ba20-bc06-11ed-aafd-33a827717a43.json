@@ -11,14 +11,91 @@
     } ],
     "configuration" : {
       "description" : "SSKIoT",
-      "widgets" : { },
+      "widgets" : {
+        "14a9c7ca-1da1-2b7b-efce-44bf8ed9c38e" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "entities_table",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 6.5,
+          "config" : {
+            "timewindow" : {
+              "realtime" : {
+                "interval" : 1000,
+                "timewindowMs" : 86400000
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "4px",
+            "settings" : {
+              "entitiesTitle" : "Measurements",
+              "enableSearch" : true,
+              "enableSelectColumnDisplay" : true,
+              "enableStickyHeader" : true,
+              "enableStickyAction" : true,
+              "reserveSpaceForHiddenAction" : "true",
+              "displayEntityName" : true,
+              "displayEntityLabel" : false,
+              "displayEntityType" : true,
+              "displayPagination" : true,
+              "defaultPageSize" : 10,
+              "defaultSortOrder" : "entityName",
+              "useRowStyleFunction" : false
+            },
+            "title" : "New Entities table",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400,
+              "padding" : "5px 10px 5px 10px"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "e373f6fd-904e-9c0f-5b2f-bc08e20ae076",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "measurements",
+                "type" : "timeseries",
+                "label" : "measurements",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.08687911107167201
+              } ]
+            } ]
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "14a9c7ca-1da1-2b7b-efce-44bf8ed9c38e"
+        }
+      },
       "states" : {
         "default" : {
           "name" : "IoT Health",
           "root" : true,
           "layouts" : {
             "main" : {
-              "widgets" : { },
+              "widgets" : {
+                "14a9c7ca-1da1-2b7b-efce-44bf8ed9c38e" : {
+                  "sizeX" : 9,
+                  "sizeY" : 10,
+                  "row" : 0,
+                  "col" : 0
+                }
+              },
               "gridSettings" : {
                 "backgroundColor" : "#eeeeee",
                 "columns" : 24,
@@ -29,7 +106,28 @@
           }
         }
       },
-      "entityAliases" : { },
+      "entityAliases" : {
+        "e373f6fd-904e-9c0f-5b2f-bc08e20ae076" : {
+          "id" : "e373f6fd-904e-9c0f-5b2f-bc08e20ae076",
+          "alias" : "SSKIoT_1_Alias",
+          "filter" : {
+            "type" : "deviceSearchQuery",
+            "resolveMultiple" : true,
+            "rootStateEntity" : false,
+            "stateEntityParamName" : null,
+            "defaultStateEntity" : null,
+            "rootEntity" : {
+              "entityType" : "ASSET",
+              "id" : "49c67090-bb21-11ed-aafd-33a827717a43"
+            },
+            "direction" : "FROM",
+            "maxLevel" : 1,
+            "fetchLastLevelOnly" : false,
+            "relationType" : "Contains",
+            "deviceTypes" : [ "SSKIoT" ]
+          }
+        }
+      },
       "filters" : { },
       "timewindow" : {
         "displayValue" : "",
