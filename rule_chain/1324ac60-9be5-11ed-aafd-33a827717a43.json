@@ -27,6 +27,10 @@
       "toIndex" : 8,
       "type" : "Success"
     }, {
+      "fromIndex" : 0,
+      "toIndex" : 9,
+      "type" : "Success"
+    }, {
       "fromIndex" : 2,
       "toIndex" : 0,
       "type" : "Post telemetry"
@@ -217,6 +221,25 @@
         "id" : "6cf242f0-bc5d-11ed-aafd-33a827717a43"
       },
       "name" : "Create alarm SpO2",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 782,
+        "layoutY" : 395
+      },
+      "configuration" : {
+        "ruleChainId" : "2f3c1200-bc68-11ed-aafd-33a827717a43"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a51c0110-bc68-11ed-aafd-33a827717a43"
+      },
+      "name" : "Create alarm Heart_Rate",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
     } ],
