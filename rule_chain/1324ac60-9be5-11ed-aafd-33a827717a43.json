@@ -274,22 +274,22 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 627,
-        "layoutY" : 905
+        "layoutX" : 666,
+        "layoutY" : 904
       },
       "configuration" : {
-        "version" : 0
+        "jsScript" : "if (msgType === 'ACTIVITY_EVENT') {\r\n  if (metadata.deviceType === 'vehicle') {\r\n    return msg.humidity > 50;\r\n  } else if (metadata.deviceType === 'controller') {\r\n    return msg.temperature > 20 && msg.humidity > 60;\r\n  }\r\n}\r\nreturn false;"
       },
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "a5d75cd0-bc9f-11ed-aafd-33a827717a43"
+        "id" : "676f46f0-bd2c-11ed-aafd-33a827717a43"
       },
-      "name" : "what-to-do-next",
+      "name" : "TeacherEntrance",
       "ruleChainId" : null,
-      "type" : "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode"
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
     } ],
     "ruleChainConnections" : null
   },
