@@ -58,6 +58,10 @@
       "fromIndex" : 6,
       "toIndex" : 2,
       "type" : "Success"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 11,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : 6,
     "nodes" : [ {
@@ -267,6 +271,25 @@
       "name" : "chemLABdata",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 627,
+        "layoutY" : 905
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a5d75cd0-bc9f-11ed-aafd-33a827717a43"
+      },
+      "name" : "what-to-do-next",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode"
     } ],
     "ruleChainConnections" : null
   },
