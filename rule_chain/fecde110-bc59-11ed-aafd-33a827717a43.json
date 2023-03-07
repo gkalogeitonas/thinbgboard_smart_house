@@ -25,19 +25,39 @@
       "toIndex" : 1,
       "type" : "True"
     }, {
+      "fromIndex" : 0,
+      "toIndex" : 2,
+      "type" : "False"
+    }, {
       "fromIndex" : 2,
-      "toIndex" : 1,
+      "toIndex" : 3,
+      "type" : "True"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 4,
+      "type" : "False"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 5,
+      "type" : "True"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 6,
+      "type" : "False"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 7,
       "type" : "True"
     } ],
     "firstNodeIndex" : 0,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 312,
-        "layoutY" : 151
+        "layoutX" : 278,
+        "layoutY" : 104
       },
       "configuration" : {
-        "jsScript" : "return msg.SpO2 < 96;"
+        "jsScript" : "return msg.SpO2 < 67;"
       },
       "createdTime" : 0,
       "debugMode" : false,
@@ -52,14 +72,14 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 609,
-        "layoutY" : 151
+        "layoutX" : 552,
+        "layoutY" : 103
       },
       "configuration" : {
         "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
         "useMessageAlarmData" : false,
         "overwriteAlarmDetails" : false,
-        "alarmType" : "Alarm SpO2",
+        "alarmType" : "cyanosis",
         "severity" : "CRITICAL",
         "propagate" : false,
         "relationTypes" : [ ],
@@ -74,28 +94,150 @@
         "entityType" : "RULE_NODE",
         "id" : "6da5d0f0-bc5c-11ed-aafd-33a827717a43"
       },
-      "name" : "Create Alarm",
+      "name" : "Cyanosis Alarm",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 311,
-        "layoutY" : 240
+        "layoutX" : 279,
+        "layoutY" : 253
       },
       "configuration" : {
-        "jsScript" : "//return msg.Heart_Rate > 70;\nif (msg.Heart_Rate >85) {\n  return true;\n}\n\nif (msg.SpO2 <95) {\n  return true;\n}"
+        "jsScript" : "return msg.SpO2 <= 85;"
       },
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "45cc2610-bc61-11ed-aafd-33a827717a43"
+        "id" : "e1ff7370-bd33-11ed-aafd-33a827717a43"
       },
-      "name" : "Heart Rate Check",
+      "name" : "SpO2 check",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 552,
+        "layoutY" : 253
+      },
+      "configuration" : {
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "Brain Damage",
+        "severity" : "CRITICAL",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : true,
+        "propagateToTenant" : true,
+        "dynamicSeverity" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e1ffc190-bd33-11ed-aafd-33a827717a43"
+      },
+      "name" : "Brain Damage Alarm",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 278,
+        "layoutY" : 379
+      },
+      "configuration" : {
+        "jsScript" : "return msg.SpO2 <= 90;"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e1ffc191-bd33-11ed-aafd-33a827717a43"
+      },
+      "name" : "SpO2 check",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 554,
+        "layoutY" : 379
+      },
+      "configuration" : {
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "Low Oxygen Alarm",
+        "severity" : "CRITICAL",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : true,
+        "propagateToTenant" : true,
+        "dynamicSeverity" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e1ffe8a0-bd33-11ed-aafd-33a827717a43"
+      },
+      "name" : "Low Oxygen Alarm",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 263,
+        "layoutY" : 501
+      },
+      "configuration" : {
+        "jsScript" : "return msg.SpO2 <= 95;"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e1ffe8a1-bd33-11ed-aafd-33a827717a43"
+      },
+      "name" : "SpO2 check",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 555,
+        "layoutY" : 502
+      },
+      "configuration" : {
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "Warning Oxygen Alarm",
+        "severity" : "MAJOR",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : true,
+        "propagateToTenant" : true,
+        "dynamicSeverity" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e1ffe8a2-bd33-11ed-aafd-33a827717a43"
+      },
+      "name" : "Warning Oxygen Alarm",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
     } ],
     "ruleChainConnections" : null
   },
