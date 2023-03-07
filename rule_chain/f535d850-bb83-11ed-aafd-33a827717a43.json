@@ -21,6 +21,14 @@
       "fromIndex" : 0,
       "toIndex" : 1,
       "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 1,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : null,
     "nodes" : [ {
@@ -43,7 +51,7 @@
         "entityType" : "RULE_NODE",
         "id" : "9aed3790-bb87-11ed-aafd-33a827717a43"
       },
-      "name" : "Heart Rate generator",
+      "name" : "Heart Rate gen SSKIoT_1",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
     }, {
@@ -65,6 +73,52 @@
       "name" : "Root Rule Chain",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 53,
+        "layoutY" : 355
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 10,
+        "jsScript" : "var minHeartRate = 60;\nvar maxHeartRate = 100;\nvar msg = { Heart_Rate: + Math.floor(Math.random()*(maxHeartRate - minHeartRate) + minHeartRate) };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "afbab1e0-bb71-11ed-aafd-33a827717a43",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "c2f8a640-bd42-11ed-aafd-33a827717a43"
+      },
+      "name" : "Heart Rate gen SSKIoT_2",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 50,
+        "layoutY" : 437
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 10,
+        "jsScript" : "var minHeartRate = 60;\nvar maxHeartRate = 100;\nvar msg = { Heart_Rate: + Math.floor(Math.random()*(maxHeartRate - minHeartRate) + minHeartRate) };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "0b6b54d0-bb73-11ed-aafd-33a827717a43",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "c2f8cd50-bd42-11ed-aafd-33a827717a43"
+      },
+      "name" : "Heart Rate gen SSKIoT_3",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
     } ],
     "ruleChainConnections" : null
   },
