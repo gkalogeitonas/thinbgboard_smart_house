@@ -198,7 +198,7 @@
         "layoutY" : 501
       },
       "configuration" : {
-        "jsScript" : "return msg.SpO2 <= 95;"
+        "jsScript" : "return msg.SpO2 < 95;"
       },
       "createdTime" : 0,
       "debugMode" : false,
