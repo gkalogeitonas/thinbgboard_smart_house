@@ -24,6 +24,14 @@
       "fromIndex" : 0,
       "toIndex" : 1,
       "type" : "True"
+    }, {
+      "fromIndex" : 0,
+      "toIndex" : 2,
+      "type" : "False"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 3,
+      "type" : "True"
     } ],
     "firstNodeIndex" : 0,
     "nodes" : [ {
@@ -33,7 +41,7 @@
         "layoutY" : 150
       },
       "configuration" : {
-        "jsScript" : "return msg.Heart_Rate > 90;"
+        "jsScript" : "return msg.Heart_Rate < 50;"
       },
       "createdTime" : 0,
       "debugMode" : false,
@@ -48,14 +56,14 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 580,
+        "layoutX" : 610,
         "layoutY" : 151
       },
       "configuration" : {
         "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
         "useMessageAlarmData" : false,
         "overwriteAlarmDetails" : false,
-        "alarmType" : "Critical Heart_Rate",
+        "alarmType" : "Bradycardia Critical Heart_Rate",
         "severity" : "CRITICAL",
         "propagate" : false,
         "relationTypes" : [ ],
@@ -70,7 +78,54 @@
         "entityType" : "RULE_NODE",
         "id" : "81e395f0-bc68-11ed-aafd-33a827717a43"
       },
-      "name" : "Create alarm Heart_Rate",
+      "name" : "Bradycardia Alarm",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 334,
+        "layoutY" : 251
+      },
+      "configuration" : {
+        "jsScript" : "return msg.Heart_Rate > 100;"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "b2d25690-bd3c-11ed-aafd-33a827717a43"
+      },
+      "name" : "Heart_Rate check",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 608,
+        "layoutY" : 252
+      },
+      "configuration" : {
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "Tachycardia Critical Heart_Rate",
+        "severity" : "CRITICAL",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : true,
+        "propagateToTenant" : true,
+        "dynamicSeverity" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "b2d25691-bd3c-11ed-aafd-33a827717a43"
+      },
+      "name" : "Tachycardia Alarm",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
     } ],
