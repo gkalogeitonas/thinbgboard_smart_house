@@ -62,6 +62,14 @@
       "fromIndex" : 10,
       "toIndex" : 11,
       "type" : "Success"
+    }, {
+      "fromIndex" : 11,
+      "toIndex" : 12,
+      "type" : "True"
+    }, {
+      "fromIndex" : 11,
+      "toIndex" : 13,
+      "type" : "False"
     } ],
     "firstNodeIndex" : 6,
     "nodes" : [ {
@@ -290,6 +298,44 @@
       "name" : "TeacherEntrance",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1107,
+        "layoutY" : 731
+      },
+      "configuration" : {
+        "ruleChainId" : "a13c9000-bd44-11ed-aafd-33a827717a43"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "39794150-bd73-11ed-aafd-33a827717a43"
+      },
+      "name" : "checkPower",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1119,
+        "layoutY" : 991
+      },
+      "configuration" : {
+        "jsScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "39796860-bd73-11ed-aafd-33a827717a43"
+      },
+      "name" : "Log",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
     } ],
     "ruleChainConnections" : null
   },
