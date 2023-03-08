@@ -167,7 +167,23 @@
                 "settings" : { },
                 "_hash" : 0.1145222734265332
               } ]
-            } ]
+            } ],
+            "actions" : {
+              "rowClick" : [ {
+                "name" : "to_sskiot_details",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboardState",
+                "targetDashboardStateId" : "sskiot_details",
+                "setEntityId" : true,
+                "stateEntityParamName" : null,
+                "openRightLayout" : false,
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "614b210b-3ab4-bd33-cdf1-85382bd20b99"
+              } ]
+            }
           },
           "row" : 0,
           "col" : 0,
