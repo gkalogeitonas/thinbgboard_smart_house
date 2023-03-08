@@ -94,6 +94,10 @@
       "fromIndex" : 14,
       "toIndex" : 19,
       "type" : "3.1"
+    }, {
+      "fromIndex" : 14,
+      "toIndex" : 20,
+      "type" : "3.2"
     } ],
     "firstNodeIndex" : 6,
     "nodes" : [ {
@@ -472,6 +476,25 @@
         "id" : "e1ae4b21-bdc0-11ed-aafd-33a827717a43"
       },
       "name" : "pressureard3.1",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1466,
+        "layoutY" : 1125
+      },
+      "configuration" : {
+        "ruleChainId" : "fe13b620-bd88-11ed-aafd-33a827717a43"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "11fb67e0-bdc1-11ed-aafd-33a827717a43"
+      },
+      "name" : "pressure-ard3.2",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
     } ],
