@@ -33,13 +33,29 @@
       "fromIndex" : 3,
       "toIndex" : 4,
       "type" : "Success"
+    }, {
+      "fromIndex" : 5,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 8,
+      "toIndex" : 4,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : null,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 56,
-        "layoutY" : 309
+        "layoutX" : 53,
+        "layoutY" : 227
       },
       "configuration" : {
         "msgCount" : 0,
@@ -61,8 +77,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 56,
-        "layoutY" : 384
+        "layoutX" : 52,
+        "layoutY" : 278
       },
       "configuration" : {
         "msgCount" : 0,
@@ -84,8 +100,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 57,
-        "layoutY" : 454
+        "layoutX" : 53,
+        "layoutY" : 329
       },
       "configuration" : {
         "msgCount" : 0,
@@ -107,8 +123,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 59,
-        "layoutY" : 541
+        "layoutX" : 53,
+        "layoutY" : 379
       },
       "configuration" : {
         "msgCount" : 0,
@@ -130,8 +146,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 415,
-        "layoutY" : 305
+        "layoutX" : 404,
+        "layoutY" : 431
       },
       "configuration" : {
         "ruleChainId" : "1324ac60-9be5-11ed-aafd-33a827717a43"
@@ -146,6 +162,98 @@
       "name" : "Rule Chain",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 52,
+        "layoutY" : 452
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 10,
+        "jsScript" : "var minHeartRate = 60;\nvar maxHeartRate = 100;\nvar msg = { Heart_Rate: + Math.floor(Math.random()*(maxHeartRate - minHeartRate) + minHeartRate) };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "6eedb8c0-bb34-11ed-aafd-33a827717a43",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "24cc46b0-bdde-11ed-aafd-33a827717a43"
+      },
+      "name" : "Heart Rate gen SSKIoT_1",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 53,
+        "layoutY" : 503
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 10,
+        "jsScript" : "var minHeartRate = 60;\nvar maxHeartRate = 100;\nvar msg = { Heart_Rate: + Math.floor(Math.random()*(maxHeartRate - minHeartRate) + minHeartRate) };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "afbab1e0-bb71-11ed-aafd-33a827717a43",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "24cc6dc0-bdde-11ed-aafd-33a827717a43"
+      },
+      "name" : "Heart Rate gen SSKIoT_2",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 53,
+        "layoutY" : 553
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 10,
+        "jsScript" : "var minHeartRate = 60;\nvar maxHeartRate = 100;\nvar msg = { Heart_Rate: + Math.floor(Math.random()*(maxHeartRate - minHeartRate) + minHeartRate) };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "0b6b54d0-bb73-11ed-aafd-33a827717a43",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "24cc6dc1-bdde-11ed-aafd-33a827717a43"
+      },
+      "name" : "Heart Rate gen SSKIoT_3",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 53,
+        "layoutY" : 603
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 10,
+        "jsScript" : "var minHeartRate = 60;\nvar maxHeartRate = 100;\nvar msg = { Heart_Rate: + Math.floor(Math.random()*(maxHeartRate - minHeartRate) + minHeartRate) };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "15ea8c50-bdd5-11ed-aafd-33a827717a43",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "24cc6dc2-bdde-11ed-aafd-33a827717a43"
+      },
+      "name" : "Heart Rate gen SSKIoT_4",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
     } ],
     "ruleChainConnections" : null
   },
