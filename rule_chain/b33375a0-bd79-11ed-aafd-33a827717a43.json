@@ -25,6 +25,10 @@
       "toIndex" : 2,
       "type" : "True"
     }, {
+      "fromIndex" : 0,
+      "toIndex" : 3,
+      "type" : "False"
+    }, {
       "fromIndex" : 1,
       "toIndex" : 0,
       "type" : "Post telemetry"
@@ -71,8 +75,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 951,
-        "layoutY" : 356
+        "layoutX" : 1030,
+        "layoutY" : 407
       },
       "configuration" : {
         "alarmType" : "General Alarm",
@@ -96,6 +100,25 @@
       "name" : "falty-pressure",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1022,
+        "layoutY" : 104
+      },
+      "configuration" : {
+        "jsScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "44711db0-bd84-11ed-aafd-33a827717a43"
+      },
+      "name" : "log-weight",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbLogNode"
     } ],
     "ruleChainConnections" : null
   },
