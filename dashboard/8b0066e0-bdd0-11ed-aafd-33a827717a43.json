@@ -74,6 +74,13 @@
                 "color" : "#4caf50",
                 "settings" : { },
                 "_hash" : 0.6443834026914015
+              }, {
+                "name" : "active",
+                "type" : "attribute",
+                "label" : "active",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.8864406995007708
               } ]
             } ],
             "actions" : {
