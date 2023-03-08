@@ -815,8 +815,8 @@
             "stateEntityParamName" : null,
             "defaultStateEntity" : null,
             "rootEntity" : {
-              "entityType" : "CUSTOMER",
-              "id" : "564ecea0-a2e1-11ed-aafd-33a827717a43"
+              "entityType" : "USER",
+              "id" : "574637e0-a2ea-11ed-aafd-33a827717a43"
             },
             "direction" : "FROM",
             "maxLevel" : 1,
