@@ -12,7 +12,7 @@
       "entityType" : "RULE_CHAIN",
       "id" : "019463e0-bb85-11ed-aafd-33a827717a43"
     },
-    "name" : "Hospital_Room Rule Chain",
+    "name" : "SSKIoT Hospital Rule Chain",
     "root" : false,
     "type" : "CORE"
   },
