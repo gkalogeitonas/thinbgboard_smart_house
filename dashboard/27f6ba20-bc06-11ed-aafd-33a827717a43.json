@@ -706,16 +706,16 @@
             "main" : {
               "widgets" : {
                 "14a9c7ca-1da1-2b7b-efce-44bf8ed9c38e" : {
-                  "sizeX" : 9,
-                  "sizeY" : 10,
+                  "sizeX" : 11,
+                  "sizeY" : 5,
                   "row" : 0,
                   "col" : 0
                 },
                 "83319d76-6085-9a6e-18d4-aec5ea3bd122" : {
-                  "sizeX" : 11,
-                  "sizeY" : 10,
+                  "sizeX" : 13,
+                  "sizeY" : 5,
                   "row" : 0,
-                  "col" : 9
+                  "col" : 11
                 }
               },
               "gridSettings" : {
