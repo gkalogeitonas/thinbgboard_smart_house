@@ -24,7 +24,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 0,
-      "toIndex" : 21,
+      "toIndex" : 19,
       "type" : "Success"
     }, {
       "fromIndex" : 2,
@@ -48,51 +48,51 @@
       "type" : "RPC Request to Device"
     }, {
       "fromIndex" : 2,
-      "toIndex" : 10,
+      "toIndex" : 8,
       "type" : "Post telemetry"
     }, {
       "fromIndex" : 6,
       "toIndex" : 2,
       "type" : "Success"
     }, {
-      "fromIndex" : 10,
-      "toIndex" : 11,
+      "fromIndex" : 8,
+      "toIndex" : 9,
       "type" : "Success"
     }, {
-      "fromIndex" : 11,
-      "toIndex" : 12,
+      "fromIndex" : 9,
+      "toIndex" : 10,
       "type" : "True"
     }, {
-      "fromIndex" : 11,
-      "toIndex" : 13,
+      "fromIndex" : 9,
+      "toIndex" : 11,
       "type" : "False"
     }, {
-      "fromIndex" : 11,
-      "toIndex" : 14,
+      "fromIndex" : 9,
+      "toIndex" : 12,
       "type" : "Failure"
     }, {
-      "fromIndex" : 14,
-      "toIndex" : 15,
+      "fromIndex" : 12,
+      "toIndex" : 13,
       "type" : "1.1"
     }, {
-      "fromIndex" : 14,
-      "toIndex" : 16,
+      "fromIndex" : 12,
+      "toIndex" : 14,
       "type" : "1.2"
     }, {
-      "fromIndex" : 14,
-      "toIndex" : 17,
+      "fromIndex" : 12,
+      "toIndex" : 15,
       "type" : "2.1"
     }, {
-      "fromIndex" : 14,
-      "toIndex" : 18,
+      "fromIndex" : 12,
+      "toIndex" : 16,
       "type" : "2.2"
     }, {
-      "fromIndex" : 14,
-      "toIndex" : 19,
+      "fromIndex" : 12,
+      "toIndex" : 17,
       "type" : "3.1"
     }, {
-      "fromIndex" : 14,
-      "toIndex" : 20,
+      "fromIndex" : 12,
+      "toIndex" : 18,
       "type" : "3.2"
     } ],
     "firstNodeIndex" : 6,
@@ -242,44 +242,6 @@
         "id" : "275fc040-aedf-11ed-aafd-33a827717a43"
       },
       "name" : "Smart House",
-      "ruleChainId" : null,
-      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1087,
-        "layoutY" : 46
-      },
-      "configuration" : {
-        "ruleChainId" : "fecde110-bc59-11ed-aafd-33a827717a43"
-      },
-      "createdTime" : 0,
-      "debugMode" : false,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "6cf242f0-bc5d-11ed-aafd-33a827717a43"
-      },
-      "name" : "Create alarm SpO2",
-      "ruleChainId" : null,
-      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1094,
-        "layoutY" : 116
-      },
-      "configuration" : {
-        "ruleChainId" : "2f3c1200-bc68-11ed-aafd-33a827717a43"
-      },
-      "createdTime" : 0,
-      "debugMode" : false,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "a51c0110-bc68-11ed-aafd-33a827717a43"
-      },
-      "name" : "Create alarm Heart_Rate",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
     }, {
