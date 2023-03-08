@@ -350,7 +350,7 @@
               },
               "customLegendEnabled" : false
             },
-            "title" : "SpO2 History",
+            "title" : "${entityName} :SpO2 History",
             "dropShadow" : true,
             "enableFullscreen" : true,
             "titleStyle" : {
