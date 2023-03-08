@@ -12,7 +12,7 @@
       "entityType" : "RULE_CHAIN",
       "id" : "e24da550-bb84-11ed-aafd-33a827717a43"
     },
-    "name" : "Home SSKIoT Rule Chain",
+    "name" : "SSKIoT Home Rule Chain",
     "root" : false,
     "type" : "CORE"
   },
