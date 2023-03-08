@@ -1,14 +1,7 @@
 {
   "entityType" : "DASHBOARD",
   "entity" : {
-    "assignedCustomers" : [ {
-      "customerId" : {
-        "entityType" : "CUSTOMER",
-        "id" : "564ecea0-a2e1-11ed-aafd-33a827717a43"
-      },
-      "title" : "Public",
-      "public" : true
-    } ],
+    "assignedCustomers" : [ ],
     "configuration" : {
       "description" : "SSKIoT",
       "widgets" : {
