@@ -81,6 +81,13 @@
                 "color" : "#f44336",
                 "settings" : { },
                 "_hash" : 0.8864406995007708
+              }, {
+                "name" : "name",
+                "type" : "entityField",
+                "label" : "Name",
+                "color" : "#ffc107",
+                "settings" : { },
+                "_hash" : 0.19280724541062932
               } ]
             } ],
             "actions" : {
