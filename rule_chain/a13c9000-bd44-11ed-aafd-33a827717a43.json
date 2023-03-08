@@ -7,7 +7,10 @@
     "configuration" : null,
     "debugMode" : false,
     "externalId" : null,
-    "firstRuleNodeId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "d9559430-bd6e-11ed-aafd-33a827717a43"
+    },
     "id" : {
       "entityType" : "RULE_CHAIN",
       "id" : "a13c9000-bd44-11ed-aafd-33a827717a43"
@@ -17,9 +20,74 @@
     "type" : "CORE"
   },
   "metaData" : {
-    "connections" : null,
-    "firstNodeIndex" : null,
-    "nodes" : [ ],
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 1,
+      "type" : "Post telemetry"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 2,
+      "type" : "True"
+    } ],
+    "firstNodeIndex" : 0,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 445,
+        "layoutY" : 147
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d9559430-bd6e-11ed-aafd-33a827717a43"
+      },
+      "name" : "message-Type",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 816,
+        "layoutY" : 145
+      },
+      "configuration" : {
+        "jsScript" : "return msg.powerON;"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d955e250-bd6e-11ed-aafd-33a827717a43"
+      },
+      "name" : "checkPower",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1183,
+        "layoutY" : 143
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d9560960-bd6e-11ed-aafd-33a827717a43"
+      },
+      "name" : "powerLineActive",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainOutputNode"
+    } ],
     "ruleChainConnections" : null
   },
   "relations" : [ ],
