@@ -17,9 +17,136 @@
     "type" : "CORE"
   },
   "metaData" : {
-    "connections" : null,
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 4,
+      "type" : "Success"
+    } ],
     "firstNodeIndex" : null,
-    "nodes" : [ ],
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 56,
+        "layoutY" : 309
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 10,
+        "jsScript" : "var minSpO2 = 95;\nvar maxSpO2 = 100;\nvar msg = { SpO2: + Math.floor(Math.random()*(maxSpO2 - minSpO2) + minSpO2) };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "6eedb8c0-bb34-11ed-aafd-33a827717a43",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "c3d98cf0-bddd-11ed-aafd-33a827717a43"
+      },
+      "name" : "SpO2 gen SSKIoT_1",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 56,
+        "layoutY" : 384
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 10,
+        "jsScript" : "var minSpO2 = 95;\nvar maxSpO2 = 100;\nvar msg = { SpO2: + Math.floor(Math.random()*(maxSpO2 - minSpO2) + minSpO2) };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "afbab1e0-bb71-11ed-aafd-33a827717a43",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "c3d9b400-bddd-11ed-aafd-33a827717a43"
+      },
+      "name" : "SpO2 gen SSKIoT_2",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 57,
+        "layoutY" : 454
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 10,
+        "jsScript" : "var minSpO2 = 95;\nvar maxSpO2 = 100;\nvar msg = { SpO2: + Math.floor(Math.random()*(maxSpO2 - minSpO2) + minSpO2) };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "0b6b54d0-bb73-11ed-aafd-33a827717a43",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "c3d9b401-bddd-11ed-aafd-33a827717a43"
+      },
+      "name" : "SpO2 gen SSKIoT_3",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 59,
+        "layoutY" : 541
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 10,
+        "jsScript" : "var minSpO2 = 95;\nvar maxSpO2 = 100;\nvar msg = { SpO2: + Math.floor(Math.random()*(maxSpO2 - minSpO2) + minSpO2) };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "originatorId" : "15ea8c50-bdd5-11ed-aafd-33a827717a43",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "c3d9db10-bddd-11ed-aafd-33a827717a43"
+      },
+      "name" : "SpO2 gen SSKIoT_4",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 415,
+        "layoutY" : 305
+      },
+      "configuration" : {
+        "ruleChainId" : "1324ac60-9be5-11ed-aafd-33a827717a43"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "c3d9db11-bddd-11ed-aafd-33a827717a43"
+      },
+      "name" : "Rule Chain",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    } ],
     "ruleChainConnections" : null
   },
   "relations" : [ ],
