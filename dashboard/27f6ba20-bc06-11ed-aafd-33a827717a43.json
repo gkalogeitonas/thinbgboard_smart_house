@@ -815,11 +815,11 @@
             "stateEntityParamName" : null,
             "defaultStateEntity" : null,
             "rootEntity" : {
-              "entityType" : "USER",
-              "id" : "574637e0-a2ea-11ed-aafd-33a827717a43"
+              "entityType" : "CUSTOMER",
+              "id" : "564ecea0-a2e1-11ed-aafd-33a827717a43"
             },
             "direction" : "FROM",
-            "maxLevel" : 1,
+            "maxLevel" : 3,
             "fetchLastLevelOnly" : false,
             "relationType" : "Contains",
             "deviceTypes" : [ "SSKIoT" ]
