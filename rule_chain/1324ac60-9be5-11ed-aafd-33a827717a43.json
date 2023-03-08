@@ -70,6 +70,14 @@
       "fromIndex" : 11,
       "toIndex" : 13,
       "type" : "False"
+    }, {
+      "fromIndex" : 11,
+      "toIndex" : 14,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 14,
+      "toIndex" : 15,
+      "type" : "1.1"
     } ],
     "firstNodeIndex" : 6,
     "nodes" : [ {
@@ -301,8 +309,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1107,
-        "layoutY" : 731
+        "layoutX" : 1109,
+        "layoutY" : 503
       },
       "configuration" : {
         "ruleChainId" : "a13c9000-bd44-11ed-aafd-33a827717a43"
@@ -320,8 +328,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1119,
-        "layoutY" : 991
+        "layoutX" : 1116,
+        "layoutY" : 683
       },
       "configuration" : {
         "jsScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
@@ -336,6 +344,44 @@
       "name" : "Log",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1126,
+        "layoutY" : 1008
+      },
+      "configuration" : {
+        "jsScript" : "function nextRelation(metadata, msg) {\n    return ['one','nine'];\n}\nvar device;\nif(msgType === 'POST_TELEMETRY_REQUEST') {\n    switch (metadata.deviceName) {\n  case \"1.1\":\n    device = \"1.1\";\n    break;\n  case \"1.2\":\n    device = \"1.2\";\n    break;\n  case \"1.3\":\n    device = \"1.3\";\n    break;\n  case \"1.4\":\n    device = \"1.4\";\n    break;\n  case \"2.1\":\n    device = \"2.1\";\n    break;\n  case \"2.2\":\n    device = \"2.2\";\n    break;\n  case \"2.3\":\n    device = \"2.3\";\n    break;\n  case \"2.4\":\n    device = \"1.4\";\n    break;\n}\n}\nreturn nextRelation(metadata, msg);"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "3b93e720-bd77-11ed-aafd-33a827717a43"
+      },
+      "name" : "dispatch-message",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1445,
+        "layoutY" : 735
+      },
+      "configuration" : {
+        "ruleChainId" : "a13c9000-bd44-11ed-aafd-33a827717a43"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "3b940e30-bd77-11ed-aafd-33a827717a43"
+      },
+      "name" : "pressure",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
     } ],
     "ruleChainConnections" : null
   },
