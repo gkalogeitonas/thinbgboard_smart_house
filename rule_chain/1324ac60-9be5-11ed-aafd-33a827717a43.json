@@ -78,6 +78,22 @@
       "fromIndex" : 14,
       "toIndex" : 15,
       "type" : "1.1"
+    }, {
+      "fromIndex" : 14,
+      "toIndex" : 16,
+      "type" : "1.2"
+    }, {
+      "fromIndex" : 14,
+      "toIndex" : 17,
+      "type" : "2.1"
+    }, {
+      "fromIndex" : 14,
+      "toIndex" : 18,
+      "type" : "2.2"
+    }, {
+      "fromIndex" : 14,
+      "toIndex" : 19,
+      "type" : "3.1"
     } ],
     "firstNodeIndex" : 6,
     "nodes" : [ {
@@ -370,7 +386,7 @@
         "layoutY" : 605
       },
       "configuration" : {
-        "ruleChainId" : "a13c9000-bd44-11ed-aafd-33a827717a43"
+        "ruleChainId" : "b33375a0-bd79-11ed-aafd-33a827717a43"
       },
       "createdTime" : 0,
       "debugMode" : false,
@@ -380,6 +396,82 @@
         "id" : "3b940e30-bd77-11ed-aafd-33a827717a43"
       },
       "name" : "pressure-ard1.1",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1450,
+        "layoutY" : 728
+      },
+      "configuration" : {
+        "ruleChainId" : "ca686fb0-bd87-11ed-aafd-33a827717a43"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e1ae2410-bdc0-11ed-aafd-33a827717a43"
+      },
+      "name" : "pressure-ard1.2",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1452,
+        "layoutY" : 847
+      },
+      "configuration" : {
+        "ruleChainId" : "266d1b80-bd88-11ed-aafd-33a827717a43"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e1ae2411-bdc0-11ed-aafd-33a827717a43"
+      },
+      "name" : "pessure-ard2.1",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1461,
+        "layoutY" : 962
+      },
+      "configuration" : {
+        "ruleChainId" : "90b9efe0-bd88-11ed-aafd-33a827717a43"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e1ae4b20-bdc0-11ed-aafd-33a827717a43"
+      },
+      "name" : "pressure-ard2.2",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1459,
+        "layoutY" : 1063
+      },
+      "configuration" : {
+        "ruleChainId" : "ef78d9b0-bd88-11ed-aafd-33a827717a43"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e1ae4b21-bdc0-11ed-aafd-33a827717a43"
+      },
+      "name" : "pressureard3.1",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
     } ],
