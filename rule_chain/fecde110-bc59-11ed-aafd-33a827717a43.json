@@ -80,7 +80,7 @@
         "useMessageAlarmData" : false,
         "overwriteAlarmDetails" : false,
         "alarmType" : "cyanosis",
-        "severity" : "INDETERMINATE",
+        "severity" : "CRITICAL",
         "propagate" : false,
         "relationTypes" : [ ],
         "propagateToOwner" : true,
