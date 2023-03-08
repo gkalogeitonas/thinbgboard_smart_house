@@ -366,8 +366,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1445,
-        "layoutY" : 735
+        "layoutX" : 1444,
+        "layoutY" : 605
       },
       "configuration" : {
         "ruleChainId" : "a13c9000-bd44-11ed-aafd-33a827717a43"
@@ -379,7 +379,7 @@
         "entityType" : "RULE_NODE",
         "id" : "3b940e30-bd77-11ed-aafd-33a827717a43"
       },
-      "name" : "pressure",
+      "name" : "pressure-ard1.1",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
     } ],
