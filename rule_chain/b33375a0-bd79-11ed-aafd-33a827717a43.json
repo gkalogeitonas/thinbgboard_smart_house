@@ -21,6 +21,10 @@
   },
   "metaData" : {
     "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 2,
+      "type" : "True"
+    }, {
       "fromIndex" : 1,
       "toIndex" : 0,
       "type" : "Post telemetry"
@@ -64,6 +68,34 @@
       "name" : "msg Type",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 951,
+        "layoutY" : 356
+      },
+      "configuration" : {
+        "alarmType" : "General Alarm",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "severity" : "CRITICAL",
+        "propagate" : false,
+        "propagateToOwner" : false,
+        "propagateToTenant" : false,
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "dynamicSeverity" : false,
+        "relationTypes" : [ ]
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "1cca5bf0-bd84-11ed-aafd-33a827717a43"
+      },
+      "name" : "falty-pressure",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
     } ],
     "ruleChainConnections" : null
   },
