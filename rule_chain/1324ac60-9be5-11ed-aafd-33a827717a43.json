@@ -23,6 +23,10 @@
       "toIndex" : 7,
       "type" : "Success"
     }, {
+      "fromIndex" : 0,
+      "toIndex" : 21,
+      "type" : "Success"
+    }, {
       "fromIndex" : 2,
       "toIndex" : 0,
       "type" : "Post telemetry"
@@ -243,8 +247,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 775,
-        "layoutY" : 325
+        "layoutX" : 1087,
+        "layoutY" : 46
       },
       "configuration" : {
         "ruleChainId" : "fecde110-bc59-11ed-aafd-33a827717a43"
@@ -262,8 +266,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 782,
-        "layoutY" : 395
+        "layoutX" : 1094,
+        "layoutY" : 116
       },
       "configuration" : {
         "ruleChainId" : "2f3c1200-bc68-11ed-aafd-33a827717a43"
@@ -487,6 +491,25 @@
         "id" : "11fb67e0-bdc1-11ed-aafd-33a827717a43"
       },
       "name" : "pressure-ard3.2",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 781,
+        "layoutY" : 327
+      },
+      "configuration" : {
+        "ruleChainId" : "e24da550-bb84-11ed-aafd-33a827717a43"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "b42faa20-bde0-11ed-aafd-33a827717a43"
+      },
+      "name" : "SSKIoT Rule Chain",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
     } ],
