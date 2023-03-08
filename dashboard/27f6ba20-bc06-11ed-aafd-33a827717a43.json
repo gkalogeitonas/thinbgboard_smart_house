@@ -772,6 +772,21 @@
               }
             }
           }
+        },
+        "sskiot_details" : {
+          "name" : "${entityName}: SSKIoT 1 details",
+          "root" : false,
+          "layouts" : {
+            "main" : {
+              "widgets" : { },
+              "gridSettings" : {
+                "backgroundColor" : "#eeeeee",
+                "columns" : 24,
+                "margin" : 10,
+                "backgroundSizeMode" : "100%"
+              }
+            }
+          }
         }
       },
       "entityAliases" : {
@@ -809,20 +824,10 @@
           "id" : "956b583c-e289-ddce-3db5-1d7af8ad8557",
           "alias" : "SSKIoT_Devices",
           "filter" : {
-            "type" : "deviceSearchQuery",
+            "type" : "deviceType",
             "resolveMultiple" : true,
-            "rootStateEntity" : false,
-            "stateEntityParamName" : null,
-            "defaultStateEntity" : null,
-            "rootEntity" : {
-              "entityType" : "USER",
-              "id" : "574637e0-a2ea-11ed-aafd-33a827717a43"
-            },
-            "direction" : "FROM",
-            "maxLevel" : 3,
-            "fetchLastLevelOnly" : false,
-            "relationType" : "Contains",
-            "deviceTypes" : [ "SSKIoT" ]
+            "deviceType" : "SSKIoT",
+            "deviceNameFilter" : ""
           }
         }
       },
