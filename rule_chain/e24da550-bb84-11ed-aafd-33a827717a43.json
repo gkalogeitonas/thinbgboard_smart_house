@@ -7,7 +7,10 @@
     "configuration" : null,
     "debugMode" : false,
     "externalId" : null,
-    "firstRuleNodeId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "814685c0-bde0-11ed-aafd-33a827717a43"
+    },
     "id" : {
       "entityType" : "RULE_CHAIN",
       "id" : "e24da550-bb84-11ed-aafd-33a827717a43"
@@ -49,13 +52,65 @@
       "fromIndex" : 8,
       "toIndex" : 4,
       "type" : "Success"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 10,
+      "type" : "True"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 11,
+      "type" : "False"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 13,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 13,
+      "type" : "False"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 13,
+      "type" : "True"
+    }, {
+      "fromIndex" : 11,
+      "toIndex" : 12,
+      "type" : "True"
+    }, {
+      "fromIndex" : 13,
+      "toIndex" : 14,
+      "type" : "True"
+    }, {
+      "fromIndex" : 13,
+      "toIndex" : 15,
+      "type" : "False"
+    }, {
+      "fromIndex" : 15,
+      "toIndex" : 16,
+      "type" : "True"
+    }, {
+      "fromIndex" : 15,
+      "toIndex" : 17,
+      "type" : "False"
+    }, {
+      "fromIndex" : 17,
+      "toIndex" : 18,
+      "type" : "True"
+    }, {
+      "fromIndex" : 17,
+      "toIndex" : 19,
+      "type" : "False"
+    }, {
+      "fromIndex" : 19,
+      "toIndex" : 20,
+      "type" : "True"
     } ],
-    "firstNodeIndex" : null,
+    "firstNodeIndex" : 9,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 53,
-        "layoutY" : 227
+        "layoutX" : 98,
+        "layoutY" : 354
       },
       "configuration" : {
         "msgCount" : 0,
@@ -77,8 +132,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 52,
-        "layoutY" : 278
+        "layoutX" : 97,
+        "layoutY" : 405
       },
       "configuration" : {
         "msgCount" : 0,
@@ -100,8 +155,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 53,
-        "layoutY" : 329
+        "layoutX" : 98,
+        "layoutY" : 456
       },
       "configuration" : {
         "msgCount" : 0,
@@ -123,8 +178,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 53,
-        "layoutY" : 379
+        "layoutX" : 98,
+        "layoutY" : 506
       },
       "configuration" : {
         "msgCount" : 0,
@@ -146,8 +201,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 404,
-        "layoutY" : 431
+        "layoutX" : 449,
+        "layoutY" : 558
       },
       "configuration" : {
         "ruleChainId" : "1324ac60-9be5-11ed-aafd-33a827717a43"
@@ -165,8 +220,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 52,
-        "layoutY" : 452
+        "layoutX" : 97,
+        "layoutY" : 579
       },
       "configuration" : {
         "msgCount" : 0,
@@ -188,8 +243,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 53,
-        "layoutY" : 503
+        "layoutX" : 98,
+        "layoutY" : 630
       },
       "configuration" : {
         "msgCount" : 0,
@@ -211,8 +266,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 53,
-        "layoutY" : 553
+        "layoutX" : 98,
+        "layoutY" : 680
       },
       "configuration" : {
         "msgCount" : 0,
@@ -234,8 +289,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 53,
-        "layoutY" : 603
+        "layoutX" : 98,
+        "layoutY" : 730
       },
       "configuration" : {
         "msgCount" : 0,
@@ -254,6 +309,288 @@
       "name" : "Heart Rate gen SSKIoT_4",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 394,
+        "layoutY" : 24
+      },
+      "configuration" : {
+        "jsScript" : "return msg.Heart_Rate < 50;"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "814685c0-bde0-11ed-aafd-33a827717a43"
+      },
+      "name" : "Heart_Rate check",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 675,
+        "layoutY" : 25
+      },
+      "configuration" : {
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "Bradycardia Critical Heart_Rate",
+        "severity" : "CRITICAL",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : true,
+        "propagateToTenant" : true,
+        "dynamicSeverity" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "814685c1-bde0-11ed-aafd-33a827717a43"
+      },
+      "name" : "Bradycardia Alarm",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 388,
+        "layoutY" : 228
+      },
+      "configuration" : {
+        "jsScript" : "return msg.Heart_Rate > 100;"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8146acd0-bde0-11ed-aafd-33a827717a43"
+      },
+      "name" : "Heart_Rate check",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 662,
+        "layoutY" : 229
+      },
+      "configuration" : {
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "Tachycardia Critical Heart_Rate",
+        "severity" : "CRITICAL",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : true,
+        "propagateToTenant" : true,
+        "dynamicSeverity" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8146acd1-bde0-11ed-aafd-33a827717a43"
+      },
+      "name" : "Tachycardia Alarm",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 878,
+        "layoutY" : 126
+      },
+      "configuration" : {
+        "jsScript" : "return msg.SpO2 < 67;"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8146acd2-bde0-11ed-aafd-33a827717a43"
+      },
+      "name" : "SpO2 check",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1152,
+        "layoutY" : 127
+      },
+      "configuration" : {
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "cyanosis",
+        "severity" : "CRITICAL",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : true,
+        "propagateToTenant" : true,
+        "dynamicSeverity" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8146d3e0-bde0-11ed-aafd-33a827717a43"
+      },
+      "name" : "Cyanosis Alarm",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 883,
+        "layoutY" : 230
+      },
+      "configuration" : {
+        "jsScript" : "return msg.SpO2 <= 85;"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8146d3e1-bde0-11ed-aafd-33a827717a43"
+      },
+      "name" : "SpO2 check",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1156,
+        "layoutY" : 230
+      },
+      "configuration" : {
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "Brain Damage",
+        "severity" : "CRITICAL",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : true,
+        "propagateToTenant" : true,
+        "dynamicSeverity" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8146d3e2-bde0-11ed-aafd-33a827717a43"
+      },
+      "name" : "Brain Damage Alarm",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 880,
+        "layoutY" : 328
+      },
+      "configuration" : {
+        "jsScript" : "return msg.SpO2 < 90;"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8146faf0-bde0-11ed-aafd-33a827717a43"
+      },
+      "name" : "SpO2 check",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1154,
+        "layoutY" : 330
+      },
+      "configuration" : {
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "Low Oxygen Alarm",
+        "severity" : "CRITICAL",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : true,
+        "propagateToTenant" : true,
+        "dynamicSeverity" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8146faf1-bde0-11ed-aafd-33a827717a43"
+      },
+      "name" : "Low Oxygen Alarm",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 879,
+        "layoutY" : 430
+      },
+      "configuration" : {
+        "jsScript" : "return msg.SpO2 < 95;"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8146faf2-bde0-11ed-aafd-33a827717a43"
+      },
+      "name" : "SpO2 check",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1154,
+        "layoutY" : 430
+      },
+      "configuration" : {
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "alarmType" : "Warning Oxygen Alarm",
+        "severity" : "MAJOR",
+        "propagate" : false,
+        "relationTypes" : [ ],
+        "propagateToOwner" : true,
+        "propagateToTenant" : true,
+        "dynamicSeverity" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8146faf3-bde0-11ed-aafd-33a827717a43"
+      },
+      "name" : "Warning Oxygen Alarm",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
     } ],
     "ruleChainConnections" : null
   },
