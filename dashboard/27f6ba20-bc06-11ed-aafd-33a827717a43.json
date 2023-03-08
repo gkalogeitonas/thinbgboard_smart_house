@@ -617,7 +617,7 @@
       },
       "states" : {
         "default" : {
-          "name" : "IoT Health",
+          "name" : "SSKIoT Home",
           "root" : true,
           "layouts" : {
             "main" : {
