@@ -278,7 +278,7 @@
         "layoutY" : 904
       },
       "configuration" : {
-        "jsScript" : "if (msgType === 'ACTIVITY_EVENT') {\r\n  if (metadata.deviceType === 'vehicle') {\r\n    return msg.humidity > 50;\r\n  } else if (metadata.deviceType === 'controller') {\r\n    return msg.temperature > 20 && msg.humidity > 60;\r\n  }\r\n}\r\nreturn false;"
+        "jsScript" : "if (msgType === 'ACTIVITY_EVENT') {\r\n  if (metadata.deviceName === 'entranceController') {\r\n    return true;\r\n  } \r\n}\r\nreturn false;"
       },
       "createdTime" : 0,
       "debugMode" : false,
