@@ -856,8 +856,8 @@
     "image" : null,
     "mobileHide" : false,
     "mobileOrder" : null,
-    "name" : "IoT Health",
-    "title" : "IoT Health"
+    "name" : "Home",
+    "title" : "Home"
   },
   "relations" : [ ],
   "attributes" : {
