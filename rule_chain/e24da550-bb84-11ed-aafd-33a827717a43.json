@@ -54,10 +54,6 @@
       "type" : "Success"
     }, {
       "fromIndex" : 9,
-      "toIndex" : 10,
-      "type" : "True"
-    }, {
-      "fromIndex" : 9,
       "toIndex" : 11,
       "type" : "False"
     }, {
@@ -72,6 +68,14 @@
       "fromIndex" : 9,
       "toIndex" : 13,
       "type" : "True"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 21,
+      "type" : "True"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 22,
+      "type" : "Created"
     }, {
       "fromIndex" : 11,
       "toIndex" : 12,
@@ -104,13 +108,21 @@
       "fromIndex" : 19,
       "toIndex" : 20,
       "type" : "True"
+    }, {
+      "fromIndex" : 21,
+      "toIndex" : 10,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 22,
+      "toIndex" : 23,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : 9,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 98,
-        "layoutY" : 354
+        "layoutX" : 67,
+        "layoutY" : 466
       },
       "configuration" : {
         "msgCount" : 0,
@@ -132,8 +144,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 97,
-        "layoutY" : 405
+        "layoutX" : 66,
+        "layoutY" : 517
       },
       "configuration" : {
         "msgCount" : 0,
@@ -155,8 +167,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 98,
-        "layoutY" : 456
+        "layoutX" : 67,
+        "layoutY" : 568
       },
       "configuration" : {
         "msgCount" : 0,
@@ -178,8 +190,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 98,
-        "layoutY" : 506
+        "layoutX" : 67,
+        "layoutY" : 618
       },
       "configuration" : {
         "msgCount" : 0,
@@ -201,8 +213,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 449,
-        "layoutY" : 558
+        "layoutX" : 418,
+        "layoutY" : 670
       },
       "configuration" : {
         "ruleChainId" : "1324ac60-9be5-11ed-aafd-33a827717a43"
@@ -220,8 +232,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 97,
-        "layoutY" : 579
+        "layoutX" : 66,
+        "layoutY" : 691
       },
       "configuration" : {
         "msgCount" : 0,
@@ -243,8 +255,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 98,
-        "layoutY" : 630
+        "layoutX" : 67,
+        "layoutY" : 742
       },
       "configuration" : {
         "msgCount" : 0,
@@ -266,8 +278,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 98,
-        "layoutY" : 680
+        "layoutX" : 67,
+        "layoutY" : 792
       },
       "configuration" : {
         "msgCount" : 0,
@@ -289,8 +301,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 98,
-        "layoutY" : 730
+        "layoutX" : 67,
+        "layoutY" : 842
       },
       "configuration" : {
         "msgCount" : 0,
@@ -331,8 +343,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 675,
-        "layoutY" : 25
+        "layoutX" : 993,
+        "layoutY" : 21
       },
       "configuration" : {
         "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
@@ -591,6 +603,83 @@
       "name" : "Warning Oxygen Alarm",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 685,
+        "layoutY" : 24
+      },
+      "configuration" : {
+        "jsScript" : "metadata.Heart_Rate = msg.Heart_Rate;\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a4322b20-c1eb-11ed-aafd-33a827717a43"
+      },
+      "name" : "Add Heart Rate to Metadata",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1299,
+        "layoutY" : 20
+      },
+      "configuration" : {
+        "fromTemplate" : "info@testmail.org",
+        "toTemplate" : "minug@dropjar.com",
+        "ccTemplate" : null,
+        "bccTemplate" : null,
+        "subjectTemplate" : "Device ${deviceType} temperature high",
+        "mailBodyType" : "false",
+        "isHtmlTemplate" : null,
+        "bodyTemplate" : "Device ${deviceName} has Bradycardia ${Heart_Rate}"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a4322b21-c1eb-11ed-aafd-33a827717a43"
+      },
+      "name" : "Heart_Rate to Email",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.mail.TbMsgToEmailNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1542,
+        "layoutY" : 21
+      },
+      "configuration" : {
+        "useSystemSmtpSettings" : false,
+        "smtpProtocol" : "smtps",
+        "smtpHost" : "smtp.gmail.com",
+        "smtpPort" : 465,
+        "timeout" : 10000,
+        "enableTls" : false,
+        "tlsVersion" : "TLSv1.2",
+        "enableProxy" : false,
+        "proxyHost" : null,
+        "proxyPort" : null,
+        "proxyUser" : null,
+        "proxyPassword" : null,
+        "username" : "sskiot2023@gmail.com",
+        "password" : "Karagiannakis2023"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a4325230-c1eb-11ed-aafd-33a827717a43"
+      },
+      "name" : "Send Email",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.mail.TbSendEmailNode"
     } ],
     "ruleChainConnections" : null
   },
