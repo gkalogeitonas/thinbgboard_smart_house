@@ -119,7 +119,7 @@
       "configuration" : {
         "msgCount" : 0,
         "periodInSeconds" : 10,
-        "jsScript" : "var minSpO2 = 95;\nvar maxSpO2 = 100;\nvar msg = { SpO2: + Math.floor(Math.random()*(maxSpO2 - minSpO2) + minSpO2) };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "jsScript" : "var minSpO2 = 40;\nvar maxSpO2 = 100;\nvar msg = { SpO2: + Math.floor(Math.random()*(maxSpO2 - minSpO2) + minSpO2) };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "originatorId" : "6eedb8c0-bb34-11ed-aafd-33a827717a43",
         "originatorType" : "DEVICE"
       },
