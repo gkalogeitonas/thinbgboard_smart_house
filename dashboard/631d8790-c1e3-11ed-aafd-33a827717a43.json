@@ -3,7 +3,134 @@
   "entity" : {
     "assignedCustomers" : null,
     "configuration" : {
-      "description" : ""
+      "description" : "",
+      "widgets" : {
+        "fdbcf601-d760-6141-03b3-2e02e3bab4fb" : {
+          "isSystemType" : true,
+          "bundleAlias" : "control_widgets",
+          "typeAlias" : "led_indicator",
+          "type" : "rpc",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 2.5,
+          "sizeY" : 2.5,
+          "config" : {
+            "targetDeviceAliases" : [ ],
+            "showTitle" : true,
+            "backgroundColor" : "#e6e7e8",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "title" : "Led indicator",
+              "ledColor" : "#ed210b",
+              "initialValue" : true,
+              "performCheckStatus" : false,
+              "retrieveValueMethod" : "attribute",
+              "valueAttribute" : "value",
+              "parseValueFunction" : "return data ? true : false;"
+            },
+            "title" : "New Led indicator",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "decimals" : 2,
+            "datasources" : [ ],
+            "targetDeviceAliasIds" : [ "87e00927-43a8-2e90-abab-d9c86cb5b4ee" ],
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "fdbcf601-d760-6141-03b3-2e02e3bab4fb"
+        }
+      },
+      "states" : {
+        "default" : {
+          "name" : "classroomPower",
+          "root" : true,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "fdbcf601-d760-6141-03b3-2e02e3bab4fb" : {
+                  "sizeX" : 2,
+                  "sizeY" : 2,
+                  "row" : 0,
+                  "col" : 0
+                }
+              },
+              "gridSettings" : {
+                "backgroundColor" : "#eeeeee",
+                "columns" : 24,
+                "margin" : 10,
+                "backgroundSizeMode" : "100%"
+              }
+            }
+          }
+        }
+      },
+      "entityAliases" : {
+        "87e00927-43a8-2e90-abab-d9c86cb5b4ee" : {
+          "id" : "87e00927-43a8-2e90-abab-d9c86cb5b4ee",
+          "alias" : "powerLine",
+          "filter" : {
+            "type" : "singleEntity",
+            "resolveMultiple" : false,
+            "singleEntity" : {
+              "entityType" : "DEVICE",
+              "id" : "abfabd90-bd3b-11ed-aafd-33a827717a43"
+            }
+          }
+        }
+      },
+      "filters" : { },
+      "timewindow" : {
+        "displayValue" : "",
+        "hideInterval" : false,
+        "hideAggregation" : false,
+        "hideAggInterval" : false,
+        "hideTimezone" : false,
+        "selectedTab" : 0,
+        "realtime" : {
+          "realtimeType" : 0,
+          "interval" : 1000,
+          "timewindowMs" : 60000,
+          "quickInterval" : "CURRENT_DAY"
+        },
+        "history" : {
+          "historyType" : 0,
+          "interval" : 1000,
+          "timewindowMs" : 60000,
+          "fixedTimewindow" : {
+            "startTimeMs" : 1678656080872,
+            "endTimeMs" : 1678742480872
+          },
+          "quickInterval" : "CURRENT_DAY"
+        },
+        "aggregation" : {
+          "type" : "AVG",
+          "limit" : 25000
+        }
+      },
+      "settings" : {
+        "stateControllerId" : "entity",
+        "showTitle" : false,
+        "showDashboardsSelect" : true,
+        "showEntitiesSelect" : true,
+        "showDashboardTimewindow" : true,
+        "showDashboardExport" : true,
+        "toolbarAlwaysOpen" : true
+      }
     },
     "externalId" : null,
     "id" : {
