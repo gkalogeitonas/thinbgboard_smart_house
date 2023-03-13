@@ -73,10 +73,6 @@
       "toIndex" : 13,
       "type" : "True"
     }, {
-      "fromIndex" : 10,
-      "toIndex" : 22,
-      "type" : "Created"
-    }, {
       "fromIndex" : 11,
       "toIndex" : 12,
       "type" : "True"
