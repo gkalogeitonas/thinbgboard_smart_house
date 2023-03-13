@@ -598,8 +598,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 653,
-        "layoutY" : 515
+        "layoutX" : 1472,
+        "layoutY" : 128
       },
       "configuration" : {
         "jsScript" : "metadata.Heart_Rate = msg.Heart_Rate;\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
