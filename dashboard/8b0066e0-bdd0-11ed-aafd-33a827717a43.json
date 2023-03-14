@@ -1,7 +1,14 @@
 {
   "entityType" : "DASHBOARD",
   "entity" : {
-    "assignedCustomers" : null,
+    "assignedCustomers" : [ {
+      "customerId" : {
+        "entityType" : "CUSTOMER",
+        "id" : "564ecea0-a2e1-11ed-aafd-33a827717a43"
+      },
+      "title" : "Public",
+      "public" : true
+    } ],
     "configuration" : {
       "description" : "Dashboard for Hospital",
       "widgets" : {
