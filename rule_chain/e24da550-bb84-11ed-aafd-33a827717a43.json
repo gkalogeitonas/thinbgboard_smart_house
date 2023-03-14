@@ -633,7 +633,7 @@
         "toTemplate" : "minug@dropjar.com",
         "ccTemplate" : null,
         "bccTemplate" : null,
-        "subjectTemplate" : "Device ${deviceType} temperature high",
+        "subjectTemplate" : "Device ${deviceType} Bradycardia Alarm",
         "mailBodyType" : "false",
         "isHtmlTemplate" : null,
         "bodyTemplate" : "Device ${deviceName} has Bradycardia ${Heart_Rate}"
