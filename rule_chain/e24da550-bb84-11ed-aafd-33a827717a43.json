@@ -434,8 +434,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1152,
-        "layoutY" : 127
+        "layoutX" : 1302,
+        "layoutY" : 129
       },
       "configuration" : {
         "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
@@ -481,8 +481,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1156,
-        "layoutY" : 230
+        "layoutX" : 1304,
+        "layoutY" : 226
       },
       "configuration" : {
         "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
@@ -528,7 +528,7 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1154,
+        "layoutX" : 1302,
         "layoutY" : 330
       },
       "configuration" : {
@@ -575,8 +575,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1154,
-        "layoutY" : 430
+        "layoutX" : 1304,
+        "layoutY" : 428
       },
       "configuration" : {
         "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
