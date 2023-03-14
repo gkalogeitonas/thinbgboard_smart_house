@@ -78,33 +78,53 @@
       "toIndex" : 24,
       "type" : "True"
     }, {
-      "fromIndex" : 13,
-      "toIndex" : 14,
-      "type" : "True"
+      "fromIndex" : 12,
+      "toIndex" : 29,
+      "type" : "Created"
     }, {
       "fromIndex" : 13,
       "toIndex" : 15,
       "type" : "False"
     }, {
-      "fromIndex" : 15,
-      "toIndex" : 16,
+      "fromIndex" : 13,
+      "toIndex" : 25,
       "type" : "True"
+    }, {
+      "fromIndex" : 14,
+      "toIndex" : 31,
+      "type" : "Created"
     }, {
       "fromIndex" : 15,
       "toIndex" : 17,
       "type" : "False"
     }, {
-      "fromIndex" : 17,
-      "toIndex" : 18,
+      "fromIndex" : 15,
+      "toIndex" : 26,
       "type" : "True"
+    }, {
+      "fromIndex" : 16,
+      "toIndex" : 32,
+      "type" : "Created"
     }, {
       "fromIndex" : 17,
       "toIndex" : 19,
       "type" : "False"
     }, {
-      "fromIndex" : 19,
-      "toIndex" : 20,
+      "fromIndex" : 17,
+      "toIndex" : 27,
       "type" : "True"
+    }, {
+      "fromIndex" : 18,
+      "toIndex" : 33,
+      "type" : "Created"
+    }, {
+      "fromIndex" : 19,
+      "toIndex" : 28,
+      "type" : "True"
+    }, {
+      "fromIndex" : 20,
+      "toIndex" : 34,
+      "type" : "Created"
     }, {
       "fromIndex" : 21,
       "toIndex" : 10,
@@ -116,6 +136,42 @@
     }, {
       "fromIndex" : 24,
       "toIndex" : 12,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 25,
+      "toIndex" : 14,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 26,
+      "toIndex" : 16,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 27,
+      "toIndex" : 18,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 28,
+      "toIndex" : 20,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 29,
+      "toIndex" : 30,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 31,
+      "toIndex" : 35,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 32,
+      "toIndex" : 36,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 33,
+      "toIndex" : 37,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 34,
+      "toIndex" : 38,
       "type" : "Success"
     } ],
     "firstNodeIndex" : null,
@@ -285,7 +341,7 @@
       "configuration" : {
         "msgCount" : 0,
         "periodInSeconds" : 10,
-        "jsScript" : "var minHeartRate = 40;\nvar maxHeartRate = 60;\nvar msg = { Heart_Rate: + Math.floor(Math.random()*(maxHeartRate - minHeartRate) + minHeartRate) };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "jsScript" : "var minHeartRate = 60;\nvar maxHeartRate = 100;\nvar msg = { Heart_Rate: + Math.floor(Math.random()*(maxHeartRate - minHeartRate) + minHeartRate) };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "originatorId" : "0b6b54d0-bb73-11ed-aafd-33a827717a43",
         "originatorType" : "DEVICE"
       },
@@ -438,8 +494,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1521,
-        "layoutY" : 132
+        "layoutX" : 1637,
+        "layoutY" : 128
       },
       "configuration" : {
         "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
@@ -485,8 +541,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1523,
-        "layoutY" : 229
+        "layoutX" : 1639,
+        "layoutY" : 225
       },
       "configuration" : {
         "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
@@ -532,8 +588,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1521,
-        "layoutY" : 333
+        "layoutX" : 1637,
+        "layoutY" : 329
       },
       "configuration" : {
         "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
@@ -579,8 +635,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1523,
-        "layoutY" : 431
+        "layoutX" : 1639,
+        "layoutY" : 427
       },
       "configuration" : {
         "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
@@ -631,7 +687,7 @@
       },
       "configuration" : {
         "fromTemplate" : "info@testmail.org",
-        "toTemplate" : "minug@dropjar.com",
+        "toTemplate" : "sskiot2023@gmail.com",
         "ccTemplate" : null,
         "bccTemplate" : null,
         "subjectTemplate" : "Device ${deviceType} Bradycardia Alarm",
@@ -700,6 +756,372 @@
       "name" : "Add Heart Rate to Metadata",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1363,
+        "layoutY" : 129
+      },
+      "configuration" : {
+        "jsScript" : "metadata.SpO2 = msg.SpO2;\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "2a8469f0-c295-11ed-aafd-33a827717a43"
+      },
+      "name" : "Add Heart Rate to Metadata",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1355,
+        "layoutY" : 227
+      },
+      "configuration" : {
+        "jsScript" : "metadata.SpO2 = msg.SpO2;\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "2a849100-c295-11ed-aafd-33a827717a43"
+      },
+      "name" : "Add Heart Rate to Metadata",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1358,
+        "layoutY" : 329
+      },
+      "configuration" : {
+        "jsScript" : "metadata.SpO2 = msg.SpO2;\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "2a849101-c295-11ed-aafd-33a827717a43"
+      },
+      "name" : "Add Heart Rate to Metadata",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1361,
+        "layoutY" : 433
+      },
+      "configuration" : {
+        "jsScript" : "metadata.SpO2 = msg.SpO2;\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "2a849102-c295-11ed-aafd-33a827717a43"
+      },
+      "name" : "Add Heart Rate to Metadata",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 656,
+        "layoutY" : 351
+      },
+      "configuration" : {
+        "fromTemplate" : "info@testmail.org",
+        "toTemplate" : "sskiot2023@gmail.com",
+        "ccTemplate" : null,
+        "bccTemplate" : null,
+        "subjectTemplate" : "Device ${deviceType} Tachycardia Alarm",
+        "mailBodyType" : "false",
+        "isHtmlTemplate" : null,
+        "bodyTemplate" : "Device ${deviceName} has Tachycardia ${Heart_Rate}"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "2a849103-c295-11ed-aafd-33a827717a43"
+      },
+      "name" : "Heart_Rate to Email",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.mail.TbMsgToEmailNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 669,
+        "layoutY" : 456
+      },
+      "configuration" : {
+        "useSystemSmtpSettings" : false,
+        "smtpProtocol" : "smtps",
+        "smtpHost" : "smtp.gmail.com",
+        "smtpPort" : 465,
+        "timeout" : 10000,
+        "enableTls" : false,
+        "tlsVersion" : "TLSv1.2",
+        "enableProxy" : false,
+        "proxyHost" : null,
+        "proxyPort" : null,
+        "proxyUser" : null,
+        "proxyPassword" : null,
+        "username" : "sskiot2023@gmail.com",
+        "password" : "Karagiannakis2023"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "2a84b810-c295-11ed-aafd-33a827717a43"
+      },
+      "name" : "Send Email",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.mail.TbSendEmailNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1913,
+        "layoutY" : 130
+      },
+      "configuration" : {
+        "fromTemplate" : "info@testmail.org",
+        "toTemplate" : "sskiot2023@gmail.com",
+        "ccTemplate" : null,
+        "bccTemplate" : null,
+        "subjectTemplate" : "Device ${deviceType} Cyanosis Alarm",
+        "mailBodyType" : "false",
+        "isHtmlTemplate" : null,
+        "bodyTemplate" : "Device ${deviceName} has Cyanosis ${SpO2}"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "2a84b811-c295-11ed-aafd-33a827717a43"
+      },
+      "name" : "SpO2 to Email",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.mail.TbMsgToEmailNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1906,
+        "layoutY" : 230
+      },
+      "configuration" : {
+        "fromTemplate" : "info@testmail.org",
+        "toTemplate" : "sskiot2023@gmail.com",
+        "ccTemplate" : null,
+        "bccTemplate" : null,
+        "subjectTemplate" : "Device ${deviceType} Brain Damage Alarm",
+        "mailBodyType" : "false",
+        "isHtmlTemplate" : null,
+        "bodyTemplate" : "Device ${deviceName} Brain Damage ${SpO2}"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "2a84b812-c295-11ed-aafd-33a827717a43"
+      },
+      "name" : "SpO2 to Email",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.mail.TbMsgToEmailNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1910,
+        "layoutY" : 327
+      },
+      "configuration" : {
+        "fromTemplate" : "info@testmail.org",
+        "toTemplate" : "sskiot2023@gmail.com",
+        "ccTemplate" : null,
+        "bccTemplate" : null,
+        "subjectTemplate" : "Device ${deviceType} Low Oxygen Alarm",
+        "mailBodyType" : "false",
+        "isHtmlTemplate" : null,
+        "bodyTemplate" : "Device ${deviceName} has Low Oxygen ${SpO2}"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "2a84b813-c295-11ed-aafd-33a827717a43"
+      },
+      "name" : "SpO2 to Email",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.mail.TbMsgToEmailNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1909,
+        "layoutY" : 427
+      },
+      "configuration" : {
+        "fromTemplate" : "info@testmail.org",
+        "toTemplate" : "sskiot2023@gmail.com",
+        "ccTemplate" : null,
+        "bccTemplate" : null,
+        "subjectTemplate" : "Device ${deviceType} Warning Oxygen Alarm",
+        "mailBodyType" : "false",
+        "isHtmlTemplate" : null,
+        "bodyTemplate" : "Device ${deviceName} Warning Oxygen ${SpO2}"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "2a84b814-c295-11ed-aafd-33a827717a43"
+      },
+      "name" : "SpO2 to Email",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.mail.TbMsgToEmailNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2161,
+        "layoutY" : 130
+      },
+      "configuration" : {
+        "useSystemSmtpSettings" : false,
+        "smtpProtocol" : "smtps",
+        "smtpHost" : "smtp.gmail.com",
+        "smtpPort" : 465,
+        "timeout" : 10000,
+        "enableTls" : false,
+        "tlsVersion" : "TLSv1.2",
+        "enableProxy" : false,
+        "proxyHost" : null,
+        "proxyPort" : null,
+        "proxyUser" : null,
+        "proxyPassword" : null,
+        "username" : "sskiot2023@gmail.com",
+        "password" : "Karagiannakis2023"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "2a84b815-c295-11ed-aafd-33a827717a43"
+      },
+      "name" : "Send Email",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.mail.TbSendEmailNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2161,
+        "layoutY" : 228
+      },
+      "configuration" : {
+        "useSystemSmtpSettings" : false,
+        "smtpProtocol" : "smtps",
+        "smtpHost" : "smtp.gmail.com",
+        "smtpPort" : 465,
+        "timeout" : 10000,
+        "enableTls" : false,
+        "tlsVersion" : "TLSv1.2",
+        "enableProxy" : false,
+        "proxyHost" : null,
+        "proxyPort" : null,
+        "proxyUser" : null,
+        "proxyPassword" : null,
+        "username" : "sskiot2023@gmail.com",
+        "password" : "Karagiannakis2023"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "2a84df20-c295-11ed-aafd-33a827717a43"
+      },
+      "name" : "Send Email",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.mail.TbSendEmailNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2175,
+        "layoutY" : 327
+      },
+      "configuration" : {
+        "useSystemSmtpSettings" : false,
+        "smtpProtocol" : "smtps",
+        "smtpHost" : "smtp.gmail.com",
+        "smtpPort" : 465,
+        "timeout" : 10000,
+        "enableTls" : false,
+        "tlsVersion" : "TLSv1.2",
+        "enableProxy" : false,
+        "proxyHost" : null,
+        "proxyPort" : null,
+        "proxyUser" : null,
+        "proxyPassword" : null,
+        "username" : "sskiot2023@gmail.com",
+        "password" : "Karagiannakis2023"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "2a84df21-c295-11ed-aafd-33a827717a43"
+      },
+      "name" : "Send Email",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.mail.TbSendEmailNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2175,
+        "layoutY" : 425
+      },
+      "configuration" : {
+        "useSystemSmtpSettings" : false,
+        "smtpProtocol" : "smtps",
+        "smtpHost" : "smtp.gmail.com",
+        "smtpPort" : 465,
+        "timeout" : 10000,
+        "enableTls" : false,
+        "tlsVersion" : "TLSv1.2",
+        "enableProxy" : false,
+        "proxyHost" : null,
+        "proxyPort" : null,
+        "proxyUser" : null,
+        "proxyPassword" : null,
+        "username" : "sskiot2023@gmail.com",
+        "password" : "Karagiannakis2023"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "2a84df22-c295-11ed-aafd-33a827717a43"
+      },
+      "name" : "Send Email",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.mail.TbSendEmailNode"
     } ],
     "ruleChainConnections" : null
   },
