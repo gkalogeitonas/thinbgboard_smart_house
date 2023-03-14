@@ -7,7 +7,10 @@
     "configuration" : null,
     "debugMode" : false,
     "externalId" : null,
-    "firstRuleNodeId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "814685c0-bde0-11ed-aafd-33a827717a43"
+    },
     "id" : {
       "entityType" : "RULE_CHAIN",
       "id" : "e24da550-bb84-11ed-aafd-33a827717a43"
@@ -75,7 +78,7 @@
       "type" : "Created"
     }, {
       "fromIndex" : 11,
-      "toIndex" : 12,
+      "toIndex" : 24,
       "type" : "True"
     }, {
       "fromIndex" : 13,
@@ -113,8 +116,12 @@
       "fromIndex" : 22,
       "toIndex" : 23,
       "type" : "Success"
+    }, {
+      "fromIndex" : 24,
+      "toIndex" : 12,
+      "type" : "Success"
     } ],
-    "firstNodeIndex" : null,
+    "firstNodeIndex" : 9,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
@@ -387,8 +394,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 662,
-        "layoutY" : 229
+        "layoutX" : 400,
+        "layoutY" : 353
       },
       "configuration" : {
         "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
@@ -415,8 +422,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 878,
-        "layoutY" : 126
+        "layoutX" : 1097,
+        "layoutY" : 129
       },
       "configuration" : {
         "jsScript" : "return msg.SpO2 < 67;"
@@ -434,8 +441,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1302,
-        "layoutY" : 129
+        "layoutX" : 1521,
+        "layoutY" : 132
       },
       "configuration" : {
         "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
@@ -462,8 +469,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 883,
-        "layoutY" : 230
+        "layoutX" : 1102,
+        "layoutY" : 233
       },
       "configuration" : {
         "jsScript" : "return msg.SpO2 <= 85;"
@@ -481,8 +488,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1304,
-        "layoutY" : 226
+        "layoutX" : 1523,
+        "layoutY" : 229
       },
       "configuration" : {
         "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
@@ -509,8 +516,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 880,
-        "layoutY" : 328
+        "layoutX" : 1099,
+        "layoutY" : 331
       },
       "configuration" : {
         "jsScript" : "return msg.SpO2 <= 90;"
@@ -528,8 +535,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1302,
-        "layoutY" : 330
+        "layoutX" : 1521,
+        "layoutY" : 333
       },
       "configuration" : {
         "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
@@ -556,8 +563,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 879,
-        "layoutY" : 430
+        "layoutX" : 1098,
+        "layoutY" : 433
       },
       "configuration" : {
         "jsScript" : "return msg.SpO2 < 95;"
@@ -575,8 +582,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1304,
-        "layoutY" : 428
+        "layoutX" : 1523,
+        "layoutY" : 431
       },
       "configuration" : {
         "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
@@ -677,6 +684,25 @@
       "name" : "Send Email",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.mail.TbSendEmailNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 655,
+        "layoutY" : 234
+      },
+      "configuration" : {
+        "jsScript" : "metadata.Heart_Rate = msg.Heart_Rate;\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "4a0c7ea0-c292-11ed-aafd-33a827717a43"
+      },
+      "name" : "Add Heart Rate to Metadata",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     } ],
     "ruleChainConnections" : null
   },
