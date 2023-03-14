@@ -431,8 +431,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 388,
-        "layoutY" : 228
+        "layoutX" : 198,
+        "layoutY" : 237
       },
       "configuration" : {
         "jsScript" : "return msg.Heart_Rate > 100;"
@@ -450,8 +450,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 400,
-        "layoutY" : 353
+        "layoutX" : 210,
+        "layoutY" : 362
       },
       "configuration" : {
         "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
@@ -478,8 +478,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1097,
-        "layoutY" : 129
+        "layoutX" : 701,
+        "layoutY" : 130
       },
       "configuration" : {
         "jsScript" : "return msg.SpO2 < 67;"
@@ -497,8 +497,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1637,
-        "layoutY" : 128
+        "layoutX" : 1241,
+        "layoutY" : 129
       },
       "configuration" : {
         "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
@@ -525,8 +525,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1102,
-        "layoutY" : 233
+        "layoutX" : 706,
+        "layoutY" : 234
       },
       "configuration" : {
         "jsScript" : "return msg.SpO2 <= 85;"
@@ -544,8 +544,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1639,
-        "layoutY" : 225
+        "layoutX" : 1243,
+        "layoutY" : 226
       },
       "configuration" : {
         "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
@@ -572,8 +572,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1099,
-        "layoutY" : 331
+        "layoutX" : 703,
+        "layoutY" : 332
       },
       "configuration" : {
         "jsScript" : "return msg.SpO2 <= 90;"
@@ -591,8 +591,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1637,
-        "layoutY" : 329
+        "layoutX" : 1241,
+        "layoutY" : 330
       },
       "configuration" : {
         "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
@@ -619,8 +619,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1098,
-        "layoutY" : 433
+        "layoutX" : 702,
+        "layoutY" : 434
       },
       "configuration" : {
         "jsScript" : "return msg.SpO2 < 95;"
@@ -638,8 +638,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1639,
-        "layoutY" : 427
+        "layoutX" : 1243,
+        "layoutY" : 428
       },
       "configuration" : {
         "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
@@ -743,8 +743,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 655,
-        "layoutY" : 234
+        "layoutX" : 465,
+        "layoutY" : 243
       },
       "configuration" : {
         "jsScript" : "metadata.Heart_Rate = msg.Heart_Rate;\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
@@ -762,8 +762,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1363,
-        "layoutY" : 129
+        "layoutX" : 967,
+        "layoutY" : 130
       },
       "configuration" : {
         "jsScript" : "metadata.SpO2 = msg.SpO2;\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
@@ -781,8 +781,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1355,
-        "layoutY" : 227
+        "layoutX" : 959,
+        "layoutY" : 228
       },
       "configuration" : {
         "jsScript" : "metadata.SpO2 = msg.SpO2;\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
@@ -800,8 +800,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1358,
-        "layoutY" : 329
+        "layoutX" : 962,
+        "layoutY" : 330
       },
       "configuration" : {
         "jsScript" : "metadata.SpO2 = msg.SpO2;\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
@@ -819,8 +819,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1361,
-        "layoutY" : 433
+        "layoutX" : 965,
+        "layoutY" : 434
       },
       "configuration" : {
         "jsScript" : "metadata.SpO2 = msg.SpO2;\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
@@ -838,8 +838,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 656,
-        "layoutY" : 351
+        "layoutX" : 466,
+        "layoutY" : 360
       },
       "configuration" : {
         "fromTemplate" : "info@testmail.org",
@@ -864,8 +864,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 669,
-        "layoutY" : 456
+        "layoutX" : 479,
+        "layoutY" : 465
       },
       "configuration" : {
         "useSystemSmtpSettings" : false,
@@ -896,8 +896,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1913,
-        "layoutY" : 130
+        "layoutX" : 1517,
+        "layoutY" : 131
       },
       "configuration" : {
         "fromTemplate" : "info@testmail.org",
@@ -922,8 +922,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1906,
-        "layoutY" : 230
+        "layoutX" : 1510,
+        "layoutY" : 231
       },
       "configuration" : {
         "fromTemplate" : "info@testmail.org",
@@ -948,8 +948,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1910,
-        "layoutY" : 327
+        "layoutX" : 1514,
+        "layoutY" : 328
       },
       "configuration" : {
         "fromTemplate" : "info@testmail.org",
@@ -974,8 +974,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1909,
-        "layoutY" : 427
+        "layoutX" : 1513,
+        "layoutY" : 428
       },
       "configuration" : {
         "fromTemplate" : "info@testmail.org",
@@ -1000,8 +1000,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2161,
-        "layoutY" : 130
+        "layoutX" : 1765,
+        "layoutY" : 131
       },
       "configuration" : {
         "useSystemSmtpSettings" : false,
@@ -1032,8 +1032,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2161,
-        "layoutY" : 228
+        "layoutX" : 1765,
+        "layoutY" : 229
       },
       "configuration" : {
         "useSystemSmtpSettings" : false,
@@ -1064,8 +1064,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2175,
-        "layoutY" : 327
+        "layoutX" : 1779,
+        "layoutY" : 328
       },
       "configuration" : {
         "useSystemSmtpSettings" : false,
@@ -1096,8 +1096,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2175,
-        "layoutY" : 425
+        "layoutX" : 1779,
+        "layoutY" : 426
       },
       "configuration" : {
         "useSystemSmtpSettings" : false,
