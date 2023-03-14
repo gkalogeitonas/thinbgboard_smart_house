@@ -7,10 +7,7 @@
     "configuration" : null,
     "debugMode" : false,
     "externalId" : null,
-    "firstRuleNodeId" : {
-      "entityType" : "RULE_NODE",
-      "id" : "814685c0-bde0-11ed-aafd-33a827717a43"
-    },
+    "firstRuleNodeId" : null,
     "id" : {
       "entityType" : "RULE_CHAIN",
       "id" : "e24da550-bb84-11ed-aafd-33a827717a43"
@@ -46,7 +43,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 7,
-      "toIndex" : 4,
+      "toIndex" : 9,
       "type" : "Success"
     }, {
       "fromIndex" : 8,
@@ -121,7 +118,7 @@
       "toIndex" : 12,
       "type" : "Success"
     } ],
-    "firstNodeIndex" : 9,
+    "firstNodeIndex" : null,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
@@ -288,7 +285,7 @@
       "configuration" : {
         "msgCount" : 0,
         "periodInSeconds" : 10,
-        "jsScript" : "var minHeartRate = 60;\nvar maxHeartRate = 100;\nvar msg = { Heart_Rate: + Math.floor(Math.random()*(maxHeartRate - minHeartRate) + minHeartRate) };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
+        "jsScript" : "var minHeartRate = 40;\nvar maxHeartRate = 60;\nvar msg = { Heart_Rate: + Math.floor(Math.random()*(maxHeartRate - minHeartRate) + minHeartRate) };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "originatorId" : "0b6b54d0-bb73-11ed-aafd-33a827717a43",
         "originatorType" : "DEVICE"
       },
