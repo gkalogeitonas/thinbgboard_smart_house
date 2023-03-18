@@ -135,6 +135,7 @@
       "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
     }, {
       "additionalInfo" : {
+        "description" : null,
         "layoutX" : 56,
         "layoutY" : 427
       },
@@ -142,7 +143,7 @@
         "version" : 0
       },
       "createdTime" : 0,
-      "debugMode" : false,
+      "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -477,7 +478,91 @@
     } ],
     "ruleChainConnections" : null
   },
-  "relations" : [ ],
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "abfabd90-bd3b-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "1324ac60-9be5-11ed-aafd-33a827717a43"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "ba9650a0-bc67-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "1324ac60-9be5-11ed-aafd-33a827717a43"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "faa3c190-bc68-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "1324ac60-9be5-11ed-aafd-33a827717a43"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "07a53950-bc69-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "1324ac60-9be5-11ed-aafd-33a827717a43"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "247a5ba0-bc69-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "1324ac60-9be5-11ed-aafd-33a827717a43"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "3554bd40-bc68-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "1324ac60-9be5-11ed-aafd-33a827717a43"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "DEVICE",
+      "id" : "5e645dd0-bc68-11ed-aafd-33a827717a43"
+    },
+    "to" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "1324ac60-9be5-11ed-aafd-33a827717a43"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]
   }
