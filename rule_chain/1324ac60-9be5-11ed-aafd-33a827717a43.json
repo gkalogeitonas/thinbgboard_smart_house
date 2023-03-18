@@ -295,7 +295,7 @@
         "ruleChainId" : "a13c9000-bd44-11ed-aafd-33a827717a43"
       },
       "createdTime" : 0,
-      "debugMode" : false,
+      "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
